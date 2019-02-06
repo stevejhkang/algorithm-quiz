@@ -33,15 +33,11 @@ Algorithm-quiz
 
 3. Queue
 - [10845]    : 큐[(문제)](https://www.acmicpc.net/problem/10845)
-- []    : [(문제)]()
-- []    : [(문제)]()
-- []    : [(문제)]()
+
 
 4. Deque
 - [10866]   : 덱[(문제)](https://www.acmicpc.net/problem/10866)
-- []    : [(문제)]()
-- []    : [(문제)]()
-- []    : [(문제)]()
+
 
 5. Linked List
 - [1406]    : 에디터[(문제)](https://www.acmicpc.net/problem/1406)
