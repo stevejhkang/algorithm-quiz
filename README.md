@@ -10,6 +10,15 @@ Algorithm-quiz
 - [9095]    : 1,2,3 더하기[(문제)](https://www.acmicpc.net/problem/9095)
 - [11052]    : 카드 구매하기[(문제)](https://www.acmicpc.net/problem/11052)
 - [10844]    : 쉬운 계단 수[(문제)](https://www.acmicpc.net/problem/10844)
+- [11057]    : 오르막 수[(문제)](https://www.acmicpc.net/problem/11057)
+- [2193]    : 이친수[(문제)](https://www.acmicpc.net/problem/2193)
+- [9465]    : 스티커[(문제)](https://www.acmicpc.net/problem/9465)
+- [2156]    : 포도주 시식[(문제)](https://www.acmicpc.net/problem/2156)
+- [11055]    : 가장 큰 증가 부분 수열[(문제)](https://www.acmicpc.net/problem/11055)
+- [11053]    : 가장 긴 증가 부분 수열[(문제)](https://www.acmicpc.net/problem/11053)
+- [11722]    : 가장 긴 감소하는 부분 수열[(문제)](https://www.acmicpc.net/problem/11722)
+- [11054]    : 가장 긴 바이토닉 부분 수열[(문제)](https://www.acmicpc.net/problem/11054)
+- [1912]    : 연속합[(문제)](https://www.acmicpc.net/problem/1912)
 
 
 2. 그래프(BFS,DFS)
