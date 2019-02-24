@@ -72,7 +72,30 @@ Algorithm-quiz
 
 [SW EXPERT ACAMEDY]: https://swexpertacademy.com/main/main.do
 [PROGRAMMERS]: https://programmers.co.kr/learn/challenges
+[1000]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/1000.cpp
+[1406]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/1406.cpp
+[1463]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/1463.cpp
+[1699]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/1699.cpp
+[1912]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/1912.cpp
+[1991]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/1991.cpp
+[2156]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/2156.cpp
+[2579]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/2579.cpp
+[2743]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/2743.cpp
+[9095]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/9095.cpp
+[9465]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/9465.cpp
+[10808]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/10808.cpp
+[10809]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/10809.cpp
+[10845]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/10845.cpp
+[10866]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/10866.cpp
+[11052]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/11052.cpp
 [11053]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/11053.cpp
+[11054]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/11054.cpp
+[11055]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/11055.cpp
+[11057]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/11057.cpp
+[11655]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/11655.cpp
+[11722]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/11722.cpp
+[11726]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/11726.cpp
+
 
         
       
