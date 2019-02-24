@@ -104,7 +104,7 @@ Algorithm-quiz
 [10824]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/10824.cpp
 [9012]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/9012.cpp
 [10799]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/10799.cpp
-[10799]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/10799.cpp
+[10828]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/10828.cpp
 [10799]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/10799.cpp
 [10799]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/10799.cpp
 [10799]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/10799.cpp
