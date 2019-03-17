@@ -5,7 +5,7 @@ Algorithm-quiz
 [Baekjoon Online Judge]
 ----------------
 ## Category
-1. Dynamic Programming
+### 1. Dynamic Programming
 - [1463]    : 1로 만들기[(문제)](https://www.acmicpc.net/problem/1463)
 - [11726]    : 2×n 타일링[(문제)](https://www.acmicpc.net/problem/11726)
 - [11727]    : 2×n 타일링 2[(문제)](https://www.acmicpc.net/problem/11727)
@@ -30,7 +30,7 @@ Algorithm-quiz
 
 
 
-2. Graph(BFS,DFS)
+### 2. Graph(BFS,DFS)
 - [1260]    : DFS와 BFS[(문제)](https://www.acmicpc.net/problem/1260)
 - [11724]    : 연결 요소의 개수[(문제)](https://www.acmicpc.net/problem/11724)
 - [1707]    : 이분 그래프[(문제)](https://www.acmicpc.net/problem/1707)
@@ -39,7 +39,7 @@ Algorithm-quiz
 
 
 
-3. Sort
+### 3. Sort
 - [2751]    : 수 정렬하기 2[(문제)](https://www.acmicpc.net/problem/2751)
 - [11650]    : 좌표 정렬하기[(문제)](https://www.acmicpc.net/problem/11650)
 - [11651]    : 좌표 정렬하기 2[(문제)](https://www.acmicpc.net/problem/11651)
@@ -51,26 +51,26 @@ Algorithm-quiz
 - [1377]    : 버블 소트[(문제)](https://www.acmicpc.net/problem/1377)
 
 
-2. Stack
+### 4. Stack
 - [10828]    : 스택[(문제)](https://www.acmicpc.net/problem/10828)
 - [9012]    : 괄호[(문제)](https://www.acmicpc.net/problem/9012)
 - [10799]    : 쇠막대기[(문제)](https://www.acmicpc.net/problem/10799)
 
 
-3. Queue
+### 5. Queue
 - [10845]    : 큐[(문제)](https://www.acmicpc.net/problem/10845)
 
 
-4. Deque
+### 6. Deque
 - [10866]   : 덱[(문제)](https://www.acmicpc.net/problem/10866)
 
 
-5. Linked List
+### 7. Linked List
 - [1406]    : 에디터[(문제)](https://www.acmicpc.net/problem/1406)
 - [1158]    : 조세퍼스 문제[(문제)](https://www.acmicpc.net/problem/1158)
 
 
-6. Handling String
+### 8. Handling String
 - [10808]    : 알파벳 문제[(문제)](https://www.acmicpc.net/problem/10808)
 - [10809]    : 알파벳 찾기[(문제)](https://www.acmicpc.net/problem/10809)
 - [10820]    : 문자열 분석[(문제)](https://www.acmicpc.net/problem/10820)
@@ -79,7 +79,7 @@ Algorithm-quiz
 - [11656]    : 접미사 배열[(문제)](https://www.acmicpc.net/problem/11656)
 
 
-7. Handling Type
+### 9. Handling Type
 - [10824]    : 네 수[(문제)](https://www.acmicpc.net/problem/10824)
 
 
