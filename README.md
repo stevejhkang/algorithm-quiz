@@ -136,6 +136,9 @@ Algorithm-quiz
 [2133]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/2133.cpp
 [2331]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/2331.cpp
 [2751]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/2751.cpp
+[2225]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/2225.cpp
+[10451]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/10451.cpp
+[1377]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/1377.cpp
 [1377]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/1377.cpp
 
         
