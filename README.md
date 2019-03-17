@@ -30,7 +30,7 @@ Algorithm-quiz
 
 
 
-2. 그래프(BFS,DFS)
+2. Graph(BFS,DFS)
 - [1260]    : DFS와 BFS[(문제)](https://www.acmicpc.net/problem/1260)
 - [11724]    : 연결 요소의 개수[(문제)](https://www.acmicpc.net/problem/11724)
 - [1707]    : 이분 그래프[(문제)](https://www.acmicpc.net/problem/1707)
@@ -39,7 +39,7 @@ Algorithm-quiz
 
 
 
-3. 정렬
+3. Sort
 - [2751]    : 수 정렬하기 2[(문제)](https://www.acmicpc.net/problem/2751)
 - [11650]    : 좌표 정렬하기[(문제)](https://www.acmicpc.net/problem/11650)
 - [11651]    : 좌표 정렬하기 2[(문제)](https://www.acmicpc.net/problem/11651)
