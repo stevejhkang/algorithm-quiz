@@ -22,18 +22,33 @@ Algorithm-quiz
 - [11054]    : 가장 긴 바이토닉 부분 수열[(문제)](https://www.acmicpc.net/problem/11054)
 - [1912]    : 연속합[(문제)](https://www.acmicpc.net/problem/1912)
 
+- [2579]    : 계단 오르기[(문제)](https://www.acmicpc.net/problem/2579)
+- [1699]    : 제곱수의 합[(문제)](https://www.acmicpc.net/problem/1699)
+- [2133]    : 타일 채우기[(문제)](https://www.acmicpc.net/problem/2133)
+- [2225]    : 합분해[(문제)](https://www.acmicpc.net/problem/2225)
+- [2011]    : 암호코드[(문제)](https://www.acmicpc.net/problem/2011)
+
+
 
 2. 그래프(BFS,DFS)
+- [1260]    : DFS와 BFS[(문제)](https://www.acmicpc.net/problem/1260)
+- [11724]    : 연결 요소의 개수[(문제)](https://www.acmicpc.net/problem/11724)
+- [1707]    : 이분 그래프[(문제)](https://www.acmicpc.net/problem/1707)
+- [10451]    : 순열 사이클[(문제)](https://www.acmicpc.net/problem/10451)
+- [2331]    : 반복수열[(문제)](https://www.acmicpc.net/problem/2331)
+
 
 
 3. 정렬
-- [2750]    : 수정렬하기1[(문제)](https://www.acmicpc.net/problem/2750)[(참고)](https://www.acmicpc.net/blog/view/22)
-- [2751]    : 수정렬하기2[(문제)](https://www.acmicpc.net/problem/2751)
-- [10989]   : 수정렬하기3[(문제)](https://www.acmicpc.net/problem/10989)[(counting sort)](http://bowbowbow.tistory.com/8)
-- [2108]    : 통계학[(문제)](https://www.acmicpc.net/problem/2108)
-- [1427]    : 소트인사이드[(문제)](https://www.acmicpc.net/problem/1427)
-- [1181]    : 단어정렬[(문제)](https://www.acmicpc.net/problem/1181)
-- [4984]    : 베르트랑 공준[(문제)](https://www.acmicpc.net/problem/4984)
+- [2751]    : 수 정렬하기 2[(문제)](https://www.acmicpc.net/problem/2751)
+- [11650]    : 좌표 정렬하기[(문제)](https://www.acmicpc.net/problem/11650)
+- [11651]    : 좌표 정렬하기 2[(문제)](https://www.acmicpc.net/problem/11651)
+- [10814]    : 나이순 정렬[(문제)](https://www.acmicpc.net/problem/10814)
+- [10825]    : 국영수[(문제)](https://www.acmicpc.net/problem/10825)
+- [10989]    : 수 정렬하기 3[(문제)](https://www.acmicpc.net/problem/10989)
+- [11652]    : 카드[(문제)](https://www.acmicpc.net/problem/11652)
+- [11004]    : K번째 수[(문제)](https://www.acmicpc.net/problem/11004)
+- [1377]    : 버블 소트[(문제)](https://www.acmicpc.net/problem/1377)
 
 
 2. Stack
@@ -106,8 +121,23 @@ Algorithm-quiz
 [10799]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/10799.cpp
 [10828]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/10828.cpp
 [10799]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/10799.cpp
-[10799]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/10799.cpp
-[10799]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/10799.cpp
+[10814]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/10814.cpp
+[10825]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/10825.cpp
+[10989]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/10989.cpp
+[11004]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/11004.cpp
+[11650]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/11650.cpp
+[11651]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/11651.cpp
+[11652]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/11652.cpp
+[11724]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/11724.cpp
+[1260]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/1260.cpp
+[1377]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/1377.cpp
+[1707]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/1707.cpp
+[2011]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/2011.cpp
+[2133]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/2133.cpp
+[2331]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/2331.cpp
+[2751]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/2751.cpp
+[1377]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/1377.cpp
+
         
       
 
