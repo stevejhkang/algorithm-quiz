@@ -36,6 +36,11 @@ Algorithm-quiz
 - [1707]    : 이분 그래프[(문제)](https://www.acmicpc.net/problem/1707)
 - [10451]    : 순열 사이클[(문제)](https://www.acmicpc.net/problem/10451)
 - [2331]    : 반복수열[(문제)](https://www.acmicpc.net/problem/2331)
+- [9466]    : 텀 프로젝트[(문제)](https://www.acmicpc.net/problem/9466)
+- [2667]    : 단지번호붙이기[(문제)](https://www.acmicpc.net/problem/2667)
+- [4963]    : 섬의 개수[(문제)](https://www.acmicpc.net/problem/4963)
+- [7576]    : 토마토[(문제)](https://www.acmicpc.net/problem/7576)
+- [2146]    : 다리만들기[(문제)](https://www.acmicpc.net/problem/2146)
 
 
 
@@ -50,27 +55,30 @@ Algorithm-quiz
 - [11004]    : K번째 수[(문제)](https://www.acmicpc.net/problem/11004)
 - [1377]    : 버블 소트[(문제)](https://www.acmicpc.net/problem/1377)
 
+### 4. Tree
+- [1991]    : 트리순회[(문제)](https://www.acmicpc.net/problem/1991)
+- [11725]    : 트리의부모찾기[(문제)](https://www.acmicpc.net/problem/11725)
 
-### 4. Stack
+### 5. Stack
 - [10828]    : 스택[(문제)](https://www.acmicpc.net/problem/10828)
 - [9012]    : 괄호[(문제)](https://www.acmicpc.net/problem/9012)
 - [10799]    : 쇠막대기[(문제)](https://www.acmicpc.net/problem/10799)
 
 
-### 5. Queue
+### 6. Queue
 - [10845]    : 큐[(문제)](https://www.acmicpc.net/problem/10845)
 
 
-### 6. Deque
+### 7. Deque
 - [10866]   : 덱[(문제)](https://www.acmicpc.net/problem/10866)
 
 
-### 7. Linked List
+### 8. Linked List
 - [1406]    : 에디터[(문제)](https://www.acmicpc.net/problem/1406)
 - [1158]    : 조세퍼스 문제[(문제)](https://www.acmicpc.net/problem/1158)
 
 
-### 8. Handling String
+### 9. Handling String
 - [10808]    : 알파벳 문제[(문제)](https://www.acmicpc.net/problem/10808)
 - [10809]    : 알파벳 찾기[(문제)](https://www.acmicpc.net/problem/10809)
 - [10820]    : 문자열 분석[(문제)](https://www.acmicpc.net/problem/10820)
@@ -79,14 +87,26 @@ Algorithm-quiz
 - [11656]    : 접미사 배열[(문제)](https://www.acmicpc.net/problem/11656)
 
 
-### 9. Handling Type
+### 10. Handling Type
 - [10824]    : 네 수[(문제)](https://www.acmicpc.net/problem/10824)
+
 
 
 [Baekjoon Online Judge]: https://www.acmicpc.net
 
 [SW EXPERT ACAMEDY]: https://swexpertacademy.com/main/main.do
 [PROGRAMMERS]: https://programmers.co.kr/learn/challenges
+[9466]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/9466.cpp
+[2667]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/2667.cpp
+[4963]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/4963.cpp
+[7576]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/7576.cpp
+[2146]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/2146.cpp
+[1991]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/1991.cpp
+[11725]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/11725.cpp
+[1377]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/1377.cpp
+[1377]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/1377.cpp
+[1377]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/1377.cpp
+[1377]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/1377.cpp
 [1000]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/1000.cpp
 [1406]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/1406.cpp
 [1463]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/1463.cpp
@@ -139,7 +159,8 @@ Algorithm-quiz
 [2225]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/2225.cpp
 [10451]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/10451.cpp
 [1377]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/1377.cpp
-[1377]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/1377.cpp
+
+
 
         
       
