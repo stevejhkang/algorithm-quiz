@@ -27,8 +27,6 @@ Algorithm-quiz
 - [2225]    : 합분해[(문제)](https://www.acmicpc.net/problem/2225)
 - [2011]    : 암호코드[(문제)](https://www.acmicpc.net/problem/2011)
 
-
-
 ### 2. Graph(BFS,DFS)
 - [1260]    : DFS와 BFS[(문제)](https://www.acmicpc.net/problem/1260)
 - [11724]    : 연결 요소의 개수[(문제)](https://www.acmicpc.net/problem/11724)
@@ -40,8 +38,6 @@ Algorithm-quiz
 - [4963]    : 섬의 개수[(문제)](https://www.acmicpc.net/problem/4963)
 - [7576]    : 토마토[(문제)](https://www.acmicpc.net/problem/7576)
 - [2146]    : 다리만들기[(문제)](https://www.acmicpc.net/problem/2146)
-
-
 
 ### 3. Sort
 - [2751]    : 수 정렬하기 2[(문제)](https://www.acmicpc.net/problem/2751)
@@ -63,21 +59,15 @@ Algorithm-quiz
 - [9012]    : 괄호[(문제)](https://www.acmicpc.net/problem/9012)
 - [10799]    : 쇠막대기[(문제)](https://www.acmicpc.net/problem/10799)
 
-
-### 6. Queue
+### 6. Queue & Deque
 - [10845]    : 큐[(문제)](https://www.acmicpc.net/problem/10845)
-
-
-### 7. Deque
 - [10866]   : 덱[(문제)](https://www.acmicpc.net/problem/10866)
 
-
-### 8. Linked List
+### 7. Linked List
 - [1406]    : 에디터[(문제)](https://www.acmicpc.net/problem/1406)
 - [1158]    : 조세퍼스 문제[(문제)](https://www.acmicpc.net/problem/1158)
 
-
-### 9. Handling String
+### 8. Handling String
 - [10808]    : 알파벳 문제[(문제)](https://www.acmicpc.net/problem/10808)
 - [10809]    : 알파벳 찾기[(문제)](https://www.acmicpc.net/problem/10809)
 - [10820]    : 문자열 분석[(문제)](https://www.acmicpc.net/problem/10820)
@@ -85,14 +75,10 @@ Algorithm-quiz
 - [11655]    : ROT13[(문제)](https://www.acmicpc.net/problem/11655)
 - [11656]    : 접미사 배열[(문제)](https://www.acmicpc.net/problem/11656)
 
-
-### 10. Handling Type
+### 9. Handling Type
 - [10824]    : 네 수[(문제)](https://www.acmicpc.net/problem/10824)
 
-
-
 [Baekjoon Online Judge]: https://www.acmicpc.net
-
 [SW EXPERT ACAMEDY]: https://swexpertacademy.com/main/main.do
 [PROGRAMMERS]: https://programmers.co.kr/learn/challenges
 [9466]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/9466.cpp
