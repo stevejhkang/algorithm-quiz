@@ -21,7 +21,6 @@ Algorithm-quiz
 - [11722]    : 가장 긴 감소하는 부분 수열[(문제)](https://www.acmicpc.net/problem/11722)
 - [11054]    : 가장 긴 바이토닉 부분 수열[(문제)](https://www.acmicpc.net/problem/11054)
 - [1912]    : 연속합[(문제)](https://www.acmicpc.net/problem/1912)
-
 - [2579]    : 계단 오르기[(문제)](https://www.acmicpc.net/problem/2579)
 - [1699]    : 제곱수의 합[(문제)](https://www.acmicpc.net/problem/1699)
 - [2133]    : 타일 채우기[(문제)](https://www.acmicpc.net/problem/2133)
