@@ -7,6 +7,21 @@ using namespace std;
 
 int n;
 vector<pair<int, int>> vec[100001];
+int visited[100001];
+int end_point;
+int ans;
+
+void dfs(int point, int distance) {
+	if (visited[point] == 1) return;
+	visited[point] = 1;
+	if (ans < distance) {
+		ans = distance;
+		end_point = point;
+	}
+	for (int i = 0; i < vec[point].size(); i++) {
+		dfs(vec[point][i].first, distance + vec[point][i].second);
+	}
+}
 
 int main() {
 	cin >> n;
@@ -17,12 +32,14 @@ int main() {
 			scanf("%d", &b);
 			if (b == -1) break;
 			scanf("%d", &val);
-
-			vec[i].push_back(pair<int, int>(b, val));
+			vec[a].push_back(pair<int, int>(b, val));
 		}
 	}
 
+	dfs(1, 0);
+	ans = 0; memset(visited, 0, sizeof(visited));
+	dfs(end_point, 0);
 
-
+	printf("%d\n", ans);
 	return 0;
 }

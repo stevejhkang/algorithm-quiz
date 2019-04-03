@@ -1,42 +1,52 @@
 #define _CRT_SECURE_NO_WARNINGS
-#include <string>
+#include <cstdio>
 #include <iostream>
-#include <stack>
-#include "node.h"
 using namespace std;
 
-node *node_arr[26];
+int n;
+int tree[26][2];
+
+//호출 순서에 주목!
+void preOrder(int node) { //루트 -> 왼자식 -> 오른자식
+	if (node == (int)('.' - 'A')) //.이면 바로 탈출
+		return;
+	printf("%c", (char)(node + 'A')); 
+	//루트먼저 출력 후 자식 노드 출력. char로 변환
+	preOrder(tree[node][0]);
+	preOrder(tree[node][1]);
+}
+void inOrder(int node) { //왼자식 -> 루트 -> 오른자식
+	if (node == (int)('.' - 'A')) //.이면 바로 탈출
+		return;
+	inOrder(tree[node][0]);
+	printf("%c", (char)(node + 'A'));
+	inOrder(tree[node][1]);
+}
+void postOrder(int node) {//왼자식->오른자식->루트
+	if (node == (int)('.' - 'A')) //.이면 바로 탈출
+		return;
+	postOrder(tree[node][0]);
+	postOrder(tree[node][1]);
+	printf("%c", (char)(node + 'A'));
+}
 
 int main() {
+	cin >> n;
+	char a, b, c ;
 
-	int n;
-	scanf("%d", &n);
-
-	//n개의 노드를 생성한다.
 	for (int i = 0; i < n; i++) {
-		node_arr[i] = new node((char)65+i);
-		cout << node_arr[i]->data << endl;
+		cin >> a >> b >> c;
+		tree[a - 'A'][0] = b - 'A'; 
+		//문자를 배열의 인덱스로 매핑하는게 핵심요소.
+		tree[a - 'A'][1] = c - 'A';
 	}
 
-	//노드 연결 입력에 따라 노드들을 연결해주어야 한다.
-	//처음부터 쭉쭉 연결을 시켜주어야 한다.
-	//A랑 차이에 따라 포인터 배열에 있는 애를 이어주면 된다.
-	for (int i = 0; i < n; i++) {
-		char temp1, temp2,temp3;
-		scanf("%c %c %c", &temp1, &temp2, &temp3);
-		if (temp2 == '.') node_arr[i]->left = node_arr[temp2 - temp1+i];
-		else if (temp3 == '.') node_arr[i]->right = node_arr[temp3 - temp1+i];
-		else {
-			node_arr[i]->left = node_arr[temp2 - temp1 + i];
-			node_arr[i]->right = node_arr[temp3 - temp1 + i];
-		}
-		
-		if (node_arr[i]->left != NULL) printf("%2c %2c\n", node_arr[i]->data, node_arr[i]->left->data);
-		else if (node_arr[i]->right != NULL) printf("%2c %2c\n", node_arr[i]->data, node_arr[i]->right->data);
-		else printf("%2c %2c %2c\n", node_arr[i]->data, node_arr[i]->left->data, node_arr[i]->right->data);
-	}
-	stack<char> preorder;
-		
-
+	preOrder(0);
+	printf("\n");
+	inOrder(0);
+	printf("\n");
+	postOrder(0);
+	printf("\n");
+	
 	return 0;
 }
