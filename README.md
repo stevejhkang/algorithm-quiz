@@ -53,6 +53,8 @@ Algorithm-quiz
 ### 4. Tree
 - [1991]    : 트리순회[(문제)](https://www.acmicpc.net/problem/1991)
 - [11725]    : 트리의부모찾기[(문제)](https://www.acmicpc.net/problem/11725)
+- [1167]    : 트리의지름1[(문제)](https://www.acmicpc.net/problem/1167)
+- [1967]    : 트리의지름2[(문제)](https://www.acmicpc.net/problem/1967)
 
 ### 5. Stack
 - [10828]    : 스택[(문제)](https://www.acmicpc.net/problem/10828)
@@ -81,6 +83,10 @@ Algorithm-quiz
 [Baekjoon Online Judge]: https://www.acmicpc.net
 [SW EXPERT ACAMEDY]: https://swexpertacademy.com/main/main.do
 [PROGRAMMERS]: https://programmers.co.kr/learn/challenges
+[1377]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/1377.cpp
+[1377]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/1377.cpp
+[1167]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/1167.cpp
+[1967]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/1967.cpp
 [9466]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/9466.cpp
 [2667]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/2667.cpp
 [4963]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/4963.cpp
@@ -88,10 +94,6 @@ Algorithm-quiz
 [2146]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/2146.cpp
 [1991]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/1991.cpp
 [11725]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/11725.cpp
-[1377]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/1377.cpp
-[1377]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/1377.cpp
-[1377]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/1377.cpp
-[1377]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/1377.cpp
 [1000]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/1000.cpp
 [1406]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/1406.cpp
 [1463]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/1463.cpp
