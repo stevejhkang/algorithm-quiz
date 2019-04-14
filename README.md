@@ -50,26 +50,29 @@ Algorithm-quiz
 - [11004]    : K번째 수[(문제)](https://www.acmicpc.net/problem/11004)
 - [1377]    : 버블 소트[(문제)](https://www.acmicpc.net/problem/1377)
 
-### 4. Tree
+### 4. Brute Force Algorithm
+- [11723]    : 집합[(문제)](https://www.acmicpc.net/problem/11723)
+
+### 5. Tree
 - [1991]    : 트리순회[(문제)](https://www.acmicpc.net/problem/1991)
 - [11725]    : 트리의부모찾기[(문제)](https://www.acmicpc.net/problem/11725)
 - [1167]    : 트리의지름1[(문제)](https://www.acmicpc.net/problem/1167)
 - [1967]    : 트리의지름2[(문제)](https://www.acmicpc.net/problem/1967)
 
-### 5. Stack
+### 6. Stack
 - [10828]    : 스택[(문제)](https://www.acmicpc.net/problem/10828)
 - [9012]    : 괄호[(문제)](https://www.acmicpc.net/problem/9012)
 - [10799]    : 쇠막대기[(문제)](https://www.acmicpc.net/problem/10799)
 
-### 6. Queue & Deque
+### 7. Queue & Deque
 - [10845]    : 큐[(문제)](https://www.acmicpc.net/problem/10845)
 - [10866]   : 덱[(문제)](https://www.acmicpc.net/problem/10866)
 
-### 7. Linked List
+### 8. Linked List
 - [1406]    : 에디터[(문제)](https://www.acmicpc.net/problem/1406)
 - [1158]    : 조세퍼스 문제[(문제)](https://www.acmicpc.net/problem/1158)
 
-### 8. Handling String
+### 9. Handling String
 - [10808]    : 알파벳 문제[(문제)](https://www.acmicpc.net/problem/10808)
 - [10809]    : 알파벳 찾기[(문제)](https://www.acmicpc.net/problem/10809)
 - [10820]    : 문자열 분석[(문제)](https://www.acmicpc.net/problem/10820)
@@ -77,7 +80,7 @@ Algorithm-quiz
 - [11655]    : ROT13[(문제)](https://www.acmicpc.net/problem/11655)
 - [11656]    : 접미사 배열[(문제)](https://www.acmicpc.net/problem/11656)
 
-### 9. Handling Type
+### 10. Handling Type
 - [10824]    : 네 수[(문제)](https://www.acmicpc.net/problem/10824)
 
 [Baekjoon Online Judge]: https://www.acmicpc.net
@@ -85,6 +88,7 @@ Algorithm-quiz
 [PROGRAMMERS]: https://programmers.co.kr/learn/challenges
 [1377]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/1377.cpp
 [1377]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/1377.cpp
+[11723]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/11723.cpp
 [1167]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/1167.cpp
 [1967]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/1967.cpp
 [9466]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/9466.cpp
