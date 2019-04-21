@@ -56,6 +56,8 @@ Algorithm-quiz
 - [10973]    : 이전순열[(문제)](https://www.acmicpc.net/problem/10973)
 - [10974]    : 모든순열[(문제)](https://www.acmicpc.net/problem/10974)
 - [1722]    : 순열의순서[(문제)](https://www.acmicpc.net/problem/1722)
+- [1476]    : 날짜계산[(문제)](https://www.acmicpc.net/problem/1476)
+- [1107]    : 리모컨[(문제)](https://www.acmicpc.net/problem/1107)
 
 ### 5. Tree
 - [1991]    : 트리순회[(문제)](https://www.acmicpc.net/problem/1991)
@@ -91,8 +93,9 @@ Algorithm-quiz
 [SW EXPERT ACAMEDY]: https://swexpertacademy.com/main/main.do
 [PROGRAMMERS]: https://programmers.co.kr/learn/challenges
 
-[1377]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/1377.cpp
-[1377]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/1377.cpp
+[1476]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/1476.cpp
+[1476]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/1476.cpp
+[1107]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/1107.cpp
 [1722]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/1722.cpp
 [10974]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/10974.cpp
 [10973]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/10973.cpp
