@@ -59,6 +59,8 @@ Algorithm-quiz
 - [1476]    : 날짜계산[(문제)](https://www.acmicpc.net/problem/1476)
 - [1107]    : 리모컨[(문제)](https://www.acmicpc.net/problem/1107)
 - [10819]    : 차이를최대로[(문제)](https://www.acmicpc.net/problem/10819)
+- [10971]    : 외판원순회2[(문제)](https://www.acmicpc.net/problem/10971)
+- [6603]    : 로또[(문제)](https://www.acmicpc.net/problem/6603)
 
 
 ### 5. Tree
@@ -97,6 +99,8 @@ Algorithm-quiz
 
 [1476]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/1476.cpp
 [1476]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/1476.cpp
+[10971]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/10971.cpp
+[6603]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/6603.cpp
 [10819]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/10819.cpp
 [1107]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/1107.cpp
 [1722]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/1722.cpp
