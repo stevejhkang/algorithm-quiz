@@ -61,6 +61,8 @@ Algorithm-quiz
 - [10819]    : 차이를최대로[(문제)](https://www.acmicpc.net/problem/10819)
 - [10971]    : 외판원순회2[(문제)](https://www.acmicpc.net/problem/10971)
 - [6603]    : 로또[(문제)](https://www.acmicpc.net/problem/6603)
+- [1963]    : 소수경로[(문제)](https://www.acmicpc.net/problem/1963)
+- [1697]    : 숨바꼭질[(문제)](https://www.acmicpc.net/problem/1697)
 
 
 ### 5. Tree
@@ -99,6 +101,8 @@ Algorithm-quiz
 
 [1476]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/1476.cpp
 [1476]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/1476.cpp
+[1697]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/1697.cpp
+[1963]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/1963.cpp
 [10971]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/10971.cpp
 [6603]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/6603.cpp
 [10819]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/10819.cpp
