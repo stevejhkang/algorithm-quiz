@@ -38,15 +38,15 @@ Algorithm-quiz
 - [9095]    : 123더하기[(문제)](https://www.acmicpc.net/problem/9095)
 - [10819]    : 차이를최대로[(문제)](https://www.acmicpc.net/problem/10819)
 
-### 3. Binary Search
-
-### 4. BFS & DFS
+### 3. BFS & DFS
 - [10971]    : 외판원순회2[(문제)](https://www.acmicpc.net/problem/10971)
 - [6603]    : 로또[(문제)](https://www.acmicpc.net/problem/6603)
 - [1697]    : 숨바꼭질[(문제)](https://www.acmicpc.net/problem/1697)
 - [1963]    : 소수경로[(문제)](https://www.acmicpc.net/problem/1963)
 - [9019]    : DSLR[(문제)](https://www.acmicpc.net/problem/9019)
 - [1525]    : 퍼즐[(문제)](https://www.acmicpc.net/problem/1525)
+
+### 4. Binary Search
 
 ### 5. Graph
 - [1260]    : DFS와 BFS[(문제)](https://www.acmicpc.net/problem/1260)
