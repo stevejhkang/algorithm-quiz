@@ -27,7 +27,6 @@ Algorithm-quiz
 - [2225]    : 합분해[(문제)](https://www.acmicpc.net/problem/2225)
 - [2011]    : 암호코드[(문제)](https://www.acmicpc.net/problem/2011)
 
-
 ### 2. Brute Force Algorithm
 - [11723]    : 집합[(문제)](https://www.acmicpc.net/problem/11723)
 - [10972]    : 다음순열[(문제)](https://www.acmicpc.net/problem/10972)
@@ -39,10 +38,7 @@ Algorithm-quiz
 - [9095]    : 123더하기[(문제)](https://www.acmicpc.net/problem/9095)
 - [10819]    : 차이를최대로[(문제)](https://www.acmicpc.net/problem/10819)
 
-
 ### 3. Binary Search
-
-
 
 ### 4. BFS & DFS
 - [10971]    : 외판원순회2[(문제)](https://www.acmicpc.net/problem/10971)
@@ -51,8 +47,6 @@ Algorithm-quiz
 - [1963]    : 소수경로[(문제)](https://www.acmicpc.net/problem/1963)
 - [9019]    : DSLR[(문제)](https://www.acmicpc.net/problem/9019)
 - [1525]    : 퍼즐[(문제)](https://www.acmicpc.net/problem/1525)
-
-
 
 ### 5. Graph
 - [1260]    : DFS와 BFS[(문제)](https://www.acmicpc.net/problem/1260)
