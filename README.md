@@ -27,7 +27,34 @@ Algorithm-quiz
 - [2225]    : 합분해[(문제)](https://www.acmicpc.net/problem/2225)
 - [2011]    : 암호코드[(문제)](https://www.acmicpc.net/problem/2011)
 
-### 2. Graph(BFS,DFS)
+
+### 2. Brute Force Algorithm
+- [11723]    : 집합[(문제)](https://www.acmicpc.net/problem/11723)
+- [10972]    : 다음순열[(문제)](https://www.acmicpc.net/problem/10972)
+- [10973]    : 이전순열[(문제)](https://www.acmicpc.net/problem/10973)
+- [10974]    : 모든순열[(문제)](https://www.acmicpc.net/problem/10974)
+- [1722]    : 순열의순서[(문제)](https://www.acmicpc.net/problem/1722)
+- [1476]    : 날짜계산[(문제)](https://www.acmicpc.net/problem/1476)
+- [1107]    : 리모컨[(문제)](https://www.acmicpc.net/problem/1107)
+- [9095]    : 123더하기[(문제)](https://www.acmicpc.net/problem/9095)
+- [10819]    : 차이를최대로[(문제)](https://www.acmicpc.net/problem/10819)
+
+
+### 3. Binary Search
+
+
+
+### 4. BFS & DFS
+- [10971]    : 외판원순회2[(문제)](https://www.acmicpc.net/problem/10971)
+- [6603]    : 로또[(문제)](https://www.acmicpc.net/problem/6603)
+- [1697]    : 숨바꼭질[(문제)](https://www.acmicpc.net/problem/1697)
+- [1963]    : 소수경로[(문제)](https://www.acmicpc.net/problem/1963)
+- [9019]    : DSLR[(문제)](https://www.acmicpc.net/problem/9019)
+- [1525]    : 퍼즐[(문제)](https://www.acmicpc.net/problem/1525)
+
+
+
+### 5. Graph
 - [1260]    : DFS와 BFS[(문제)](https://www.acmicpc.net/problem/1260)
 - [11724]    : 연결 요소의 개수[(문제)](https://www.acmicpc.net/problem/11724)
 - [1707]    : 이분 그래프[(문제)](https://www.acmicpc.net/problem/1707)
@@ -39,7 +66,7 @@ Algorithm-quiz
 - [7576]    : 토마토[(문제)](https://www.acmicpc.net/problem/7576)
 - [2146]    : 다리만들기[(문제)](https://www.acmicpc.net/problem/2146)
 
-### 3. Sort
+### 6. Sort
 - [2751]    : 수 정렬하기 2[(문제)](https://www.acmicpc.net/problem/2751)
 - [11650]    : 좌표 정렬하기[(문제)](https://www.acmicpc.net/problem/11650)
 - [11651]    : 좌표 정렬하기 2[(문제)](https://www.acmicpc.net/problem/11651)
@@ -50,43 +77,26 @@ Algorithm-quiz
 - [11004]    : K번째 수[(문제)](https://www.acmicpc.net/problem/11004)
 - [1377]    : 버블 소트[(문제)](https://www.acmicpc.net/problem/1377)
 
-### 4. Brute Force Algorithm
-- [11723]    : 집합[(문제)](https://www.acmicpc.net/problem/11723)
-- [10972]    : 다음순열[(문제)](https://www.acmicpc.net/problem/10972)
-- [10973]    : 이전순열[(문제)](https://www.acmicpc.net/problem/10973)
-- [10974]    : 모든순열[(문제)](https://www.acmicpc.net/problem/10974)
-- [1722]    : 순열의순서[(문제)](https://www.acmicpc.net/problem/1722)
-- [1476]    : 날짜계산[(문제)](https://www.acmicpc.net/problem/1476)
-- [1107]    : 리모컨[(문제)](https://www.acmicpc.net/problem/1107)
-- [10819]    : 차이를최대로[(문제)](https://www.acmicpc.net/problem/10819)
-- [10971]    : 외판원순회2[(문제)](https://www.acmicpc.net/problem/10971)
-- [6603]    : 로또[(문제)](https://www.acmicpc.net/problem/6603)
-- [1963]    : 소수경로[(문제)](https://www.acmicpc.net/problem/1963)
-- [1697]    : 숨바꼭질[(문제)](https://www.acmicpc.net/problem/1697)
-- [9019]    : DSLR[(문제)](https://www.acmicpc.net/problem/9019)
-- [1525]    : 퍼즐[(문제)](https://www.acmicpc.net/problem/1525)
-
-
-### 5. Tree
+### 7. Tree
 - [1991]    : 트리순회[(문제)](https://www.acmicpc.net/problem/1991)
 - [11725]    : 트리의부모찾기[(문제)](https://www.acmicpc.net/problem/11725)
 - [1167]    : 트리의지름1[(문제)](https://www.acmicpc.net/problem/1167)
 - [1967]    : 트리의지름2[(문제)](https://www.acmicpc.net/problem/1967)
 
-### 6. Stack
+### 8. Stack
 - [10828]    : 스택[(문제)](https://www.acmicpc.net/problem/10828)
 - [9012]    : 괄호[(문제)](https://www.acmicpc.net/problem/9012)
 - [10799]    : 쇠막대기[(문제)](https://www.acmicpc.net/problem/10799)
 
-### 7. Queue & Deque
+### 9. Queue & Deque
 - [10845]    : 큐[(문제)](https://www.acmicpc.net/problem/10845)
 - [10866]   : 덱[(문제)](https://www.acmicpc.net/problem/10866)
 
-### 8. Linked List
+### 10. Linked List
 - [1406]    : 에디터[(문제)](https://www.acmicpc.net/problem/1406)
 - [1158]    : 조세퍼스 문제[(문제)](https://www.acmicpc.net/problem/1158)
 
-### 9. Handling String
+### 11. Handling String
 - [10808]    : 알파벳 문제[(문제)](https://www.acmicpc.net/problem/10808)
 - [10809]    : 알파벳 찾기[(문제)](https://www.acmicpc.net/problem/10809)
 - [10820]    : 문자열 분석[(문제)](https://www.acmicpc.net/problem/10820)
@@ -94,14 +104,14 @@ Algorithm-quiz
 - [11655]    : ROT13[(문제)](https://www.acmicpc.net/problem/11655)
 - [11656]    : 접미사 배열[(문제)](https://www.acmicpc.net/problem/11656)
 
-### 10. Handling Type
+### 12. Handling Type
 - [10824]    : 네 수[(문제)](https://www.acmicpc.net/problem/10824)
 
 [Baekjoon Online Judge]: https://www.acmicpc.net
 [SW EXPERT ACAMEDY]: https://swexpertacademy.com/main/main.do
 [PROGRAMMERS]: https://programmers.co.kr/learn/challenges
 
-[1476]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/1476.cpp
+[9095]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/9095.cpp
 [9019]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/9019.cpp
 [1525]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/1525.cpp
 [1476]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/1476.cpp
@@ -177,9 +187,3 @@ Algorithm-quiz
 [2225]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/2225.cpp
 [10451]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/10451.cpp
 [1377]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/1377.cpp
-
-
-
-        
-      
-
