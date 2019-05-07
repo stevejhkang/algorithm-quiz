@@ -63,6 +63,8 @@ Algorithm-quiz
 - [6603]    : 로또[(문제)](https://www.acmicpc.net/problem/6603)
 - [1963]    : 소수경로[(문제)](https://www.acmicpc.net/problem/1963)
 - [1697]    : 숨바꼭질[(문제)](https://www.acmicpc.net/problem/1697)
+- [9019]    : DSLR[(문제)](https://www.acmicpc.net/problem/9019)
+- [1525]    : 퍼즐[(문제)](https://www.acmicpc.net/problem/1525)
 
 
 ### 5. Tree
@@ -100,6 +102,8 @@ Algorithm-quiz
 [PROGRAMMERS]: https://programmers.co.kr/learn/challenges
 
 [1476]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/1476.cpp
+[9019]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/9019.cpp
+[1525]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/1525.cpp
 [1476]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/1476.cpp
 [1697]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/1697.cpp
 [1963]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/1963.cpp
