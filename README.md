@@ -45,6 +45,8 @@ Algorithm-quiz
 - [1963]    : 소수경로[(문제)](https://www.acmicpc.net/problem/1963)
 - [9019]    : DSLR[(문제)](https://www.acmicpc.net/problem/9019)
 - [1525]    : 퍼즐[(문제)](https://www.acmicpc.net/problem/1525)
+- [2251]    : 물통[(문제)](https://www.acmicpc.net/problem/2251)
+- [2583]    : 영역구하기[(문제)](https://www.acmicpc.net/problem/2583)
 
 ### 4. Binary Search
 
@@ -105,6 +107,8 @@ Algorithm-quiz
 [SW EXPERT ACAMEDY]: https://swexpertacademy.com/main/main.do
 [PROGRAMMERS]: https://programmers.co.kr/learn/challenges
 
+[2583]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/2583.cpp
+[2251]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/2251.cpp
 [9095]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/9095.cpp
 [9019]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/9019.cpp
 [1525]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/1525.cpp
