@@ -47,6 +47,9 @@ Algorithm-quiz
 - [1525]    : 퍼즐[(문제)](https://www.acmicpc.net/problem/1525)
 - [2251]    : 물통[(문제)](https://www.acmicpc.net/problem/2251)
 - [2583]    : 영역구하기[(문제)](https://www.acmicpc.net/problem/2583)
+- [1759]    : 암호만들기[(문제)](https://www.acmicpc.net/problem/1759)
+- [2580]    : 스도쿠[(문제)](https://www.acmicpc.net/problem/2580)
+- [1987]    : 알파벳[(문제)](https://www.acmicpc.net/problem/1987)
 
 ### 4. Binary Search
 
@@ -107,6 +110,9 @@ Algorithm-quiz
 [SW EXPERT ACAMEDY]: https://swexpertacademy.com/main/main.do
 [PROGRAMMERS]: https://programmers.co.kr/learn/challenges
 
+[1759]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/1759.cpp
+[2580]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/2580.cpp
+[1987]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/1987.cpp
 [2583]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/2583.cpp
 [2251]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/2251.cpp
 [9095]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/9095.cpp
