@@ -106,6 +106,11 @@ Algorithm-quiz
 ### 12. Handling Type
 - [10824]    : 네 수[(문제)](https://www.acmicpc.net/problem/10824)
 
+[PROGRAMMERS]
+--------------
+## Category
+
+
 [Baekjoon Online Judge]: https://www.acmicpc.net
 [SW EXPERT ACAMEDY]: https://swexpertacademy.com/main/main.do
 [PROGRAMMERS]: https://programmers.co.kr/learn/challenges
