@@ -119,8 +119,8 @@ Algorithm-quiz
 [SW EXPERT ACAMEDY]: https://swexpertacademy.com/main/main.do
 [PROGRAMMERS]: https://programmers.co.kr/learn/challenges
 
-[등굣길]:https://github.com/stevejhkang/algorithm-quiz/blob/master/programmers/goingtoschool.cpp
-[보행자천국]:https://github.com/stevejhkang/algorithm-quiz/blob/master/programmers/kakaocode/heavenofpedestrian.cpp
+[등굣길]:https://github.com/stevejhkang/algorithm-quiz/blob/master/programmers/42898.cpp
+[보행자천국]:https://github.com/stevejhkang/algorithm-quiz/blob/master/programmers/kakaocode/1832.cpp
 [1759]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/1759.cpp
 [2580]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/2580.cpp
 [1987]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/1987.cpp
