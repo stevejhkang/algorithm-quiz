@@ -109,7 +109,7 @@ Algorithm-quiz
 [PROGRAMMERS]
 --------------
 ## Category
-### DP
+### Dynamic Programming
 - [등굣길]    : [문제](https://programmers.co.kr/learn/courses/30/lessons/42898)
 
 ### 2017 Kakaocode preliminaries
