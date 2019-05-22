@@ -4,7 +4,6 @@ Algorithm-quiz
 
 [Baekjoon Online Judge]
 ----------------
-## Category
 ### 1. Dynamic Programming
 - [1463]    : 1로 만들기[(문제)](https://www.acmicpc.net/problem/1463)
 - [11726]    : 2×n 타일링[(문제)](https://www.acmicpc.net/problem/11726)
@@ -108,7 +107,6 @@ Algorithm-quiz
 
 [PROGRAMMERS]
 --------------
-## Category
 ### Dynamic Programming
 - [등굣길]    : [문제](https://programmers.co.kr/learn/courses/30/lessons/42898)
 
