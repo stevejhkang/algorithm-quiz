@@ -109,12 +109,18 @@ Algorithm-quiz
 [PROGRAMMERS]
 --------------
 ## Category
+### DP
+- [등굣길]    : 등굣길[(문제)](https://programmers.co.kr/learn/courses/30/lessons/42898)
 
+### 2017 Kakaocode preliminaries
+- [보행자천국]    : 보행자천국[(문제)](https://programmers.co.kr/learn/courses/30/lessons/1832)
 
 [Baekjoon Online Judge]: https://www.acmicpc.net
 [SW EXPERT ACAMEDY]: https://swexpertacademy.com/main/main.do
 [PROGRAMMERS]: https://programmers.co.kr/learn/challenges
 
+[등굣길]:https://github.com/stevejhkang/algorithm-quiz/blob/master/goingtoschool.cpp
+[보행자천국]:https://github.com/stevejhkang/algorithm-quiz/blob/master/kakaocode/heavenofpedestrian.cpp
 [1759]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/1759.cpp
 [2580]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/2580.cpp
 [1987]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/1987.cpp
