@@ -110,10 +110,10 @@ Algorithm-quiz
 --------------
 ## Category
 ### DP
-- [등굣길]    : 등굣길[(문제)](https://programmers.co.kr/learn/courses/30/lessons/42898)
+- [등굣길]    : [(문제)](https://programmers.co.kr/learn/courses/30/lessons/42898)
 
 ### 2017 Kakaocode preliminaries
-- [보행자천국]    : 보행자천국[(문제)](https://programmers.co.kr/learn/courses/30/lessons/1832)
+- [보행자천국]    : [(문제)](https://programmers.co.kr/learn/courses/30/lessons/1832)
 
 [Baekjoon Online Judge]: https://www.acmicpc.net
 [SW EXPERT ACAMEDY]: https://swexpertacademy.com/main/main.do
