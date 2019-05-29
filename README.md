@@ -123,6 +123,7 @@ Algorithm-quiz
 [SW EXPERT ACAMEDY]: https://swexpertacademy.com/main/main.do
 [PROGRAMMERS]: https://programmers.co.kr/learn/challenges
 
+[11048]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/11048.cpp
 [1890]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/1890.cpp
 [2293]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/2293.cpp
 [1495]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/1495.cpp
