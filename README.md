@@ -25,6 +25,12 @@ Algorithm-quiz
 - [2133]    : 타일 채우기[(문제)](https://www.acmicpc.net/problem/2133)
 - [2225]    : 합분해[(문제)](https://www.acmicpc.net/problem/2225)
 - [2011]    : 암호코드[(문제)](https://www.acmicpc.net/problem/2011)
+- [11048]    : 이동하기[(문제)](https://www.acmicpc.net/problem/11048)
+- [1890]    : 점프[(문제)](https://www.acmicpc.net/problem/1890)
+- [2293]    : 동전1[(문제)](https://www.acmicpc.net/problem/2293)
+- [1495]    : 기타리스트[(문제)](https://www.acmicpc.net/problem/1495)
+- [5557]    : 1학년[(문제)](https://www.acmicpc.net/problem/5557)
+- [11066]    : 파일합치기[(문제)](https://www.acmicpc.net/problem/11066)
 
 ### 2. Brute Force Algorithm
 - [11723]    : 집합[(문제)](https://www.acmicpc.net/problem/11723)
@@ -117,6 +123,11 @@ Algorithm-quiz
 [SW EXPERT ACAMEDY]: https://swexpertacademy.com/main/main.do
 [PROGRAMMERS]: https://programmers.co.kr/learn/challenges
 
+[1890]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/1890.cpp
+[2293]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/2293.cpp
+[1495]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/1495.cpp
+[5557]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/5557.cpp
+[11066]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/11066.cpp
 [등굣길]:https://github.com/stevejhkang/algorithm-quiz/blob/master/programmers/42898.cpp
 [보행자천국]:https://github.com/stevejhkang/algorithm-quiz/blob/master/programmers/kakaocode/1832.cpp
 [1759]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/1759.cpp
