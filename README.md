@@ -113,8 +113,19 @@ Algorithm-quiz
 
 [PROGRAMMERS]
 --------------
+### Brute Force
+- [모의고사]    : [문제](https://programmers.co.kr/learn/courses/30/lessons/42840)
+
 ### Dynamic Programming
 - [등굣길]    : [문제](https://programmers.co.kr/learn/courses/30/lessons/42898)
+- [타일장식물]    : [문제](https://programmers.co.kr/learn/courses/30/lessons/43104)
+
+### BFS/DFS
+- [타켓넘버]    : [문제](https://programmers.co.kr/learn/courses/30/lessons/43165)
+- [네트워크]    : [문제](https://programmers.co.kr/learn/courses/30/lessons/43162)
+
+### Stack/Queue
+- [프린터]    : [문제](https://programmers.co.kr/learn/courses/30/lessons/42587)
 
 ### 2017 Kakaocode preliminaries
 - [보행자천국]    : [문제](https://programmers.co.kr/learn/courses/30/lessons/1832)
@@ -123,6 +134,12 @@ Algorithm-quiz
 [SW EXPERT ACAMEDY]: https://swexpertacademy.com/main/main.do
 [PROGRAMMERS]: https://programmers.co.kr/learn/challenges
 
+[프린터]:https://github.com/stevejhkang/algorithm-quiz/blob/master/programmers/42587.cpp
+[모의고사]:https://github.com/stevejhkang/algorithm-quiz/blob/master/programmers/42840.cpp
+[타일장식물]:https://github.com/stevejhkang/algorithm-quiz/blob/master/programmers/43104.cpp
+[타켓넘버]:https://github.com/stevejhkang/algorithm-quiz/blob/master/programmers/43165.cpp
+[네트워크]:https://github.com/stevejhkang/algorithm-quiz/blob/master/programmers/43162.cpp
+[보행자천국]:https://github.com/stevejhkang/algorithm-quiz/blob/master/programmers/kakaocode/1832.cpp
 [11048]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/11048.cpp
 [1890]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/1890.cpp
 [2293]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/2293.cpp
