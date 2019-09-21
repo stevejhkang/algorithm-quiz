@@ -141,7 +141,7 @@ Algorithm-quiz
 [타일장식물]:https://github.com/stevejhkang/algorithm-quiz/blob/master/programmers/43104.cpp
 [타켓넘버]:https://github.com/stevejhkang/algorithm-quiz/blob/master/programmers/43165.cpp
 [네트워크]:https://github.com/stevejhkang/algorithm-quiz/blob/master/programmers/43162.cpp
-[보행자천국]:https://github.com/stevejhkang/algorithm-quiz/blob/master/programmers/kakaocode/1832.cpp
+[보행자천국]:https://github.com/stevejhkang/algorithm-quiz/blob/master/programmers/1832.cpp
 [11048]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/11048.cpp
 [1890]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/1890.cpp
 [2293]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/2293.cpp
