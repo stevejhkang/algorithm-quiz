@@ -9,6 +9,7 @@ int solution(int n, vector<vector<int>> computers) {
     int answer = 0;
 
     stack<int> stk;
+    //스택은 중간에 끊길 수 있기 때문에 다 넣어주는 지 체크해준다./////////////////////////////////
     for(int i=0;i<n;i++){
         if(visited[i]==0){ 
             //만약 방문하지 않았으면 새로운 네트워크이므로
@@ -17,10 +18,11 @@ int solution(int n, vector<vector<int>> computers) {
             visited[i]=1;
             stk.push(i);
         }
-        else{//방문했으면 연결 된 것이므로 그냥 넘어간다.
+        else{//방문했으면 연결 된 것이므로 그냥 넘어간다./////////////////////////////////////
           continue;  
         } 
         while(!stk.empty()){
+            //연결된건 여기서 다 찾아서 처리해준다.///////////////////////////////////////////////////
             int now=stk.top(); stk.pop();
             for(int j=0;j<n;j++){ //스택 맨 위에 있는 것과 연결된 모든 것을 찾아준다.
                 //현재 now와 j가 만나야 같은 네트워크
