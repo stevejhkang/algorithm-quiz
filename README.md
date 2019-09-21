@@ -127,13 +127,15 @@ Algorithm-quiz
 ### Stack/Queue
 - [프린터]    : [문제](https://programmers.co.kr/learn/courses/30/lessons/42587)
 
-### 2017 Kakaocode preliminaries
+### 2017 Kakao
 - [보행자천국]    : [문제](https://programmers.co.kr/learn/courses/30/lessons/1832)
+- [다트게임]    : [문제](https://programmers.co.kr/learn/courses/30/lessons/17682)
 
 [Baekjoon Online Judge]: https://www.acmicpc.net
 [SW EXPERT ACAMEDY]: https://swexpertacademy.com/main/main.do
 [PROGRAMMERS]: https://programmers.co.kr/learn/challenges
 
+[다트게임]:https://github.com/stevejhkang/algorithm-quiz/blob/master/programmers/17682.py
 [프린터]:https://github.com/stevejhkang/algorithm-quiz/blob/master/programmers/42587.cpp
 [모의고사]:https://github.com/stevejhkang/algorithm-quiz/blob/master/programmers/42840.cpp
 [타일장식물]:https://github.com/stevejhkang/algorithm-quiz/blob/master/programmers/43104.cpp
