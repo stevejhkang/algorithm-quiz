@@ -43,6 +43,7 @@ Algorithm-quiz
 - [9095]    : 123더하기[(문제)](https://www.acmicpc.net/problem/9095)
 - [10819]    : 차이를최대로[(문제)](https://www.acmicpc.net/problem/10819)
 - [6064]    : 카잉달력[(문제)](https://www.acmicpc.net/problem/6064)
+- [1339]    : 단어수학[(문제)](https://www.acmicpc.net/problem/1339)
 
 ### 3. BFS & DFS
 - [10971]    : 외판원순회2[(문제)](https://www.acmicpc.net/problem/10971)
@@ -137,6 +138,7 @@ Algorithm-quiz
 [SW EXPERT ACAMEDY]: https://swexpertacademy.com/main/main.do
 [PROGRAMMERS]: https://programmers.co.kr/learn/challenges
 
+[1339]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/1339.cpp
 [6064]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/6064.cpp
 [단어변환]:https://github.com/stevejhkang/algorithm-quiz/blob/master/programmers/43163.cpp
 [다트게임]:https://github.com/stevejhkang/algorithm-quiz/blob/master/programmers/17682.py
