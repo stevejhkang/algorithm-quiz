@@ -45,6 +45,10 @@ Algorithm-quiz
 - [6064]    : 카잉달력[(문제)](https://www.acmicpc.net/problem/6064)
 - [1339]    : 단어수학[(문제)](https://www.acmicpc.net/problem/1339)
 
+### 2-1. Brute Force Algorithm(Backtracking)
+- [14889]    : 스타트와링크[(문제)](https://www.acmicpc.net/problem/14889)
+- [2580_2]    : 스도쿠[(문제)](https://www.acmicpc.net/problem/2580)
+
 ### 3. BFS & DFS
 - [10971]    : 외판원순회2[(문제)](https://www.acmicpc.net/problem/10971)
 - [6603]    : 로또[(문제)](https://www.acmicpc.net/problem/6603)
@@ -138,6 +142,8 @@ Algorithm-quiz
 [SW EXPERT ACAMEDY]: https://swexpertacademy.com/main/main.do
 [PROGRAMMERS]: https://programmers.co.kr/learn/challenges
 
+[14889]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/14889.cpp
+[2580_2]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/2580_2.cpp
 [1339]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/1339.cpp
 [6064]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/6064.cpp
 [단어변환]:https://github.com/stevejhkang/algorithm-quiz/blob/master/programmers/43163.cpp
