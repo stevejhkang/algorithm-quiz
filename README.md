@@ -62,7 +62,8 @@ Algorithm-quiz
 - [2580]    : 스도쿠[(문제)](https://www.acmicpc.net/problem/2580)
 - [1987]    : 알파벳[(문제)](https://www.acmicpc.net/problem/1987)
 
-### 4. Binary Search
+### 4. Simulation
+- [15685]    : 드래곤 커브[(문제)](https://www.acmicpc.net/problem/15685)
 
 ### 5. Graph
 - [1260]    : DFS와 BFS[(문제)](https://www.acmicpc.net/problem/1260)
@@ -142,6 +143,7 @@ Algorithm-quiz
 [SW EXPERT ACAMEDY]: https://swexpertacademy.com/main/main.do
 [PROGRAMMERS]: https://programmers.co.kr/learn/challenges
 
+[15685]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/15685.cpp
 [14889]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/14889.cpp
 [2580_2]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/2580_2.cpp
 [1339]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/1339.cpp
