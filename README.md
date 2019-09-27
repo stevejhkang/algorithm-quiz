@@ -121,22 +121,22 @@ Algorithm-quiz
 
 [PROGRAMMERS]
 --------------
-### Brute Force
+### 1. Brute Force
 - [모의고사]    : [문제](https://programmers.co.kr/learn/courses/30/lessons/42840)
 
-### Dynamic Programming
+### 2. Dynamic Programming
 - [등굣길]    : [문제](https://programmers.co.kr/learn/courses/30/lessons/42898)
 - [타일장식물]    : [문제](https://programmers.co.kr/learn/courses/30/lessons/43104)
 
-### BFS/DFS
+### 3. BFS/DFS
 - [타켓넘버]    : [문제](https://programmers.co.kr/learn/courses/30/lessons/43165)
 - [네트워크]    : [문제](https://programmers.co.kr/learn/courses/30/lessons/43162)
 - [단어변환]    : [문제](https://programmers.co.kr/learn/courses/30/lessons/43163)
 
-### Stack/Queue
+### 4. Stack/Queue
 - [프린터]    : [문제](https://programmers.co.kr/learn/courses/30/lessons/42587)
 
-### 2017 Kakao
+### 5. 2017 Kakao
 - [보행자천국]    : [문제](https://programmers.co.kr/learn/courses/30/lessons/1832)
 - [다트게임]    : [문제](https://programmers.co.kr/learn/courses/30/lessons/17682)
 
