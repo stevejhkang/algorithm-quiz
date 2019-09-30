@@ -5,6 +5,8 @@
 #include<deque>
 using namespace std;
 
+//조합과 BFS
+
 int dy[] = { 0,-1,0,1 };
 int dx[] = { 1,0,-1,0 };
 
