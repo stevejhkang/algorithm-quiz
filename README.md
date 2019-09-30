@@ -65,6 +65,7 @@ Algorithm-quiz
 ### 4. Simulation
 - [15685]    : 드래곤커브[(문제)](https://www.acmicpc.net/problem/15685)
 - [14890]    : 경사로[(문제)](https://www.acmicpc.net/problem/14890)
+- [3190]    : 뱀[(문제)](https://www.acmicpc.net/problem/3190)
 
 ### 5. Graph
 - [1260]    : DFS와 BFS[(문제)](https://www.acmicpc.net/problem/1260)
@@ -144,7 +145,8 @@ Algorithm-quiz
 [SW EXPERT ACAMEDY]: https://swexpertacademy.com/main/main.do
 [PROGRAMMERS]: https://programmers.co.kr/learn/challenges
 
-[14890]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/14890.cpp
+[3190]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/3190.cpp
+[3190]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/3190.cpp
 [14890]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/14890.cpp
 [15685]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/15685.cpp
 [14889]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/14889.cpp
