@@ -61,11 +61,13 @@ Algorithm-quiz
 - [1759]    : 암호만들기[(문제)](https://www.acmicpc.net/problem/1759)
 - [2580]    : 스도쿠[(문제)](https://www.acmicpc.net/problem/2580)
 - [1987]    : 알파벳[(문제)](https://www.acmicpc.net/problem/1987)
+- [17142]    : 연구소3[(문제)](https://www.acmicpc.net/problem/17142)
 
 ### 4. Simulation
 - [15685]    : 드래곤커브[(문제)](https://www.acmicpc.net/problem/15685)
 - [14890]    : 경사로[(문제)](https://www.acmicpc.net/problem/14890)
 - [3190]    : 뱀[(문제)](https://www.acmicpc.net/problem/3190)
+- [17140]    : 이차원배열과연산[(문제)](https://www.acmicpc.net/problem/17140)
 
 ### 5. Graph
 - [1260]    : DFS와 BFS[(문제)](https://www.acmicpc.net/problem/1260)
@@ -144,8 +146,9 @@ Algorithm-quiz
 [Baekjoon Online Judge]: https://www.acmicpc.net
 [SW EXPERT ACAMEDY]: https://swexpertacademy.com/main/main.do
 [PROGRAMMERS]: https://programmers.co.kr/learn/challenges
-
-[3190]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/3190.cpp
+[17142]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/17142.cpp
+[17142]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/17142.cpp
+[17140]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/17140.cpp
 [3190]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/3190.cpp
 [14890]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/14890.cpp
 [15685]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/15685.cpp
