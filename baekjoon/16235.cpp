@@ -95,10 +95,6 @@ int main() {
 				//출력
 				if (int(tree[i][j].size()) != 0) {
 					q[year + 1].push_back(make_pair(i, j)); //나무들이 있는 위치를 q에 저장해준다.
-					/*for (int k = 0; k < tree[i][j].size(); k++) {
-						cout << i << "," << j << ": " << tree[i][j][k] << " yang: " << yang[i][j] << "\n";
-					}*/
-					sort(tree[i][j].begin(), tree[i][j].end());
 				}
 			}
 		}
