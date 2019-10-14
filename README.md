@@ -44,6 +44,7 @@ Algorithm-quiz
 - [10819]    : 차이를최대로[(문제)](https://www.acmicpc.net/problem/10819)
 - [6064]    : 카잉달력[(문제)](https://www.acmicpc.net/problem/6064)
 - [1339]    : 단어수학[(문제)](https://www.acmicpc.net/problem/1339)
+- [16235]    : 나무재테크[(문제)](https://www.acmicpc.net/problem/16235)
 
 ### 2-1. Brute Force Algorithm(Backtracking)
 - [14889]    : 스타트와링크[(문제)](https://www.acmicpc.net/problem/14889)
@@ -146,7 +147,8 @@ Algorithm-quiz
 [Baekjoon Online Judge]: https://www.acmicpc.net
 [SW EXPERT ACAMEDY]: https://swexpertacademy.com/main/main.do
 [PROGRAMMERS]: https://programmers.co.kr/learn/challenges
-[17142]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/17142.cpp
+[16235]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/16235.cpp
+[16235]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/16235.cpp
 [17142]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/17142.cpp
 [17140]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/17140.cpp
 [3190]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/3190.cpp
