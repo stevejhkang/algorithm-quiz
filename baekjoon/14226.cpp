@@ -1,48 +1,81 @@
 #include<iostream>
-#include<vector>
 #include<queue>
-#include<tuple>
-#include<algorithm>
-#include<cstring>
-#include<map>
+ 
+#define endl "\n"
+#define MAX 2000
 using namespace std;
-map<int,int> a;
-
-int d[1001][1001];
-//이모티콘의 개수 s와 클립보드의 이모티콘 개수 c가 중요하다. 
-int main() {
-	int n; cin >> n;
-	
-	memset(d, -1, sizeof(d));
-	queue<pair<int, int>> q;
-	//memset(visit, -1, visit.size());
-	q.push(make_pair(1, 0));
-	d[1][0] = 0;
-	while (!q.empty()) {
-		int s = q.front().first; int c = q.front().second;
-		//tie(s, c) = q.front(); 
-		q.pop();
-		if (d[s][s] == -1) {
-			d[s][s] = d[s][c] + 1;
-			q.push(make_pair(s, s));
-		}
-		if (s+c<=n&&d[s + c][c]==-1) {
-			d[s + c][c] = d[s][c]+1;
-			q.push(make_pair(s + c, s));
-		}
-		if (s - 1 >= 0 && d[s - 1][c] == -1) {
-			d[s - 1][c] = d[s][c] + 1;
-			q.push(make_pair(s - 1, c));
-		}
-	}
-	int ans = -1;
-	for (int i = 0; i <=n; i++) {
-		if (d[n][i] != -1) {
-			if (ans == -1 || ans > d[n][i]) {
-				ans = visit[n][i];
-			}
-		}
-	}
-	cout << ans << '\n';
-	return 0;
+ 
+int S;
+bool Visit[MAX][MAX];
+ 
+void Input()
+{
+    cin >> S;
+}
+ 
+int BFS()
+{
+    queue<pair<pair<int, int>, int> > Q;
+    Q.push(make_pair(make_pair(1, 0), 0));
+    Visit[1][0] = true;    // 화면, 클립보드
+ 
+    while (Q.empty() == 0)
+    {
+        int Dis = Q.front().first.first;
+        int Clip = Q.front().first.second;
+        int Time = Q.front().second;
+        Q.pop();
+ 
+        if (Dis == S) return Time;
+        
+        if (Dis > 0 && Dis < MAX)
+        {
+            //1번 & 3번 조건
+            if (Visit[Dis][Dis] == false)
+            {
+                Visit[Dis][Dis] = true;
+                Q.push(make_pair(make_pair(Dis, Dis), Time + 1));
+            }
+ 
+            if (Visit[Dis - 1][Clip] == false)
+            {
+                Visit[Dis - 1][Clip] = true;
+                Q.push(make_pair(make_pair(Dis - 1, Clip), Time + 1));
+            }
+        }
+ 
+        if (Clip > 0 && Dis+Clip < MAX)
+        {
+            if (Visit[Dis + Clip][Clip] == false)
+            {
+                Visit[Dis + Clip][Clip] = true;
+                Q.push(make_pair(make_pair(Dis + Clip, Clip), Time + 1));
+            }
+        }
+    }
+}
+ 
+ 
+void Solution()
+{
+    int R = BFS();
+    cout << R << endl;
+}
+ 
+void Solve()
+{
+    Input();
+    Solution();
+}
+ 
+int main(void)
+{
+    ios::sync_with_stdio(false);
+    cin.tie(NULL);
+    cout.tie(NULL);
+ 
+    //freopen("Input.txt", "r", stdin);
+    Solve();
+ 
+    return 0;
 }
