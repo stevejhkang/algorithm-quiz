@@ -153,7 +153,7 @@ Algorithm-quiz
 - [17142]    : 연구소3[(문제)](https://www.acmicpc.net/problem/17142)
 - [17140]    : 이차원배열과연산[(문제)](https://www.acmicpc.net/problem/17140)
 - [17143]    : 낚시왕[(문제)](https://www.acmicpc.net/problem/17143)
-- [17144]    : 미세먼지안녕![(문제)](https://www.acmicpc.net/problem/17144)
+- [17144]    : 미세먼지안녕[(문제)](https://www.acmicpc.net/problem/17144)
 - [16236]    : 아기상어[(문제)](https://www.acmicpc.net/problem/16236)
 - [16235]    : 나무재테크[(문제)](https://www.acmicpc.net/problem/16235)
 - [16234]    : 인구이동[(문제)](https://www.acmicpc.net/problem/16234)
