@@ -7,6 +7,8 @@
 #include<list>
 using namespace std;
 
+//BFS 시뮬
+
 int na[50][50];
 int visit[50][50];
 int dy[] = { 0,0,-1,1 };
