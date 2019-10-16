@@ -33,6 +33,7 @@ Algorithm-quiz
 - [5557]    : 1학년[(문제)](https://www.acmicpc.net/problem/5557)
 - [11066]    : 파일합치기[(문제)](https://www.acmicpc.net/problem/11066)
 - [15990]    : 123더하기5[(문제)](https://www.acmicpc.net/problem/15990)
+- [16194]    : 카드구매하기2[(문제)](https://www.acmicpc.net/problem/16194)
 
 ### 2. Brute Force Algorithm
 - [11723]    : 집합[(문제)](https://www.acmicpc.net/problem/11723)
@@ -49,6 +50,7 @@ Algorithm-quiz
 - [16235]    : 나무재테크[(문제)](https://www.acmicpc.net/problem/16235)
 - [14888]    : 연산자끼워넣기[(문제)](https://www.acmicpc.net/problem/14888)
 - [15686]    : 치킨배달[(문제)](https://www.acmicpc.net/problem/15686)
+- [1748]    : 수이어쓰기1[(문제)](https://www.acmicpc.net/problem/1748)
 
 ### 2-1. Brute Force Algorithm(Backtracking)
 - [14889]    : 스타트와링크[(문제)](https://www.acmicpc.net/problem/14889)
@@ -75,6 +77,7 @@ Algorithm-quiz
 - [15684]    : 사다리조작[(문제)](https://www.acmicpc.net/problem/15684)
 - [13460]    : 구슬탈출2[(문제)](https://www.acmicpc.net/problem/13460)
 - [14226]    : 이모티콘[(문제)](https://www.acmicpc.net/problem/14226)
+- [2178]    : 미로탐색[(문제)](https://www.acmicpc.net/problem/2178)
 
 ### 4. Simulation
 - [15685]    : 드래곤커브[(문제)](https://www.acmicpc.net/problem/15685)
@@ -82,7 +85,12 @@ Algorithm-quiz
 - [3190]    : 뱀[(문제)](https://www.acmicpc.net/problem/3190)
 - [17140]    : 이차원배열과연산[(문제)](https://www.acmicpc.net/problem/17140)
 - [14499]    : 주사위굴리기[(문제)](https://www.acmicpc.net/problem/14499)
-- [14891]    : 시뮬레이션[(문제)](https://www.acmicpc.net/problem/14891)
+- [14891]    : 톱니바퀴[(문제)](https://www.acmicpc.net/problem/14891)
+- [16234]    : 인구이동[(문제)](https://www.acmicpc.net/problem/16234)
+- [16236]    : 아기상어[(문제)](https://www.acmicpc.net/problem/16236)
+- [17143]    : 낚시왕[(문제)](https://www.acmicpc.net/problem/17143)
+- [17144]    : 미세먼지안녕[(문제)](https://www.acmicpc.net/problem/17144)
+- [5373]    : 큐빙[(문제)](https://www.acmicpc.net/problem/5373)
 
 ### 5. Graph
 - [1260]    : DFS와 BFS[(문제)](https://www.acmicpc.net/problem/1260)
@@ -137,6 +145,9 @@ Algorithm-quiz
 ### 12. Handling Type
 - [10824]    : 네 수[(문제)](https://www.acmicpc.net/problem/10824)
 
+### 13. Topological Sort(위상정렬)
+- [2529]    : 네 수[(문제)](https://www.acmicpc.net/problem/2529)
+
 [PROGRAMMERS]
 --------------
 ### 1. Brute Force
@@ -165,6 +176,15 @@ Algorithm-quiz
 [13460]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/13460.cpp
 [13460]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/13460.cpp
 
+[5373]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/5373.cpp
+[2529]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/2529.cpp
+[2178]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/2178.cpp
+[1748]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/1748.cpp
+[17144]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/17144.cpp
+[17143]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/17143.cpp
+[16236]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/16236.cpp
+[16234]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/16234.cpp
+[16194]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/16194.cpp
 [15990]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/15990.cpp
 [15686]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/15686.cpp
 [15683]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/15683.cpp
