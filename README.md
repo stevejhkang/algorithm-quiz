@@ -148,6 +148,35 @@ Algorithm-quiz
 ### 13. Topological Sort(위상정렬)
 - [2529]    : 네 수[(문제)](https://www.acmicpc.net/problem/2529)
 
+[삼성 SW 역량 테스트 기출 문제]
+--------------
+- [17142]    : 연구소3[(문제)](https://www.acmicpc.net/problem/17142)
+- [17140]    : 이차원배열과연산[(문제)](https://www.acmicpc.net/problem/17140)
+- [17143]    : 낚시왕[(문제)](https://www.acmicpc.net/problem/17143)
+- [17144]    : 미세먼지안녕![(문제)](https://www.acmicpc.net/problem/17144)
+- [16236]    : 아기상어[(문제)](https://www.acmicpc.net/problem/16236)
+- [16235]    : 나무재테크[(문제)](https://www.acmicpc.net/problem/16235)
+- [16234]    : 인구이동[(문제)](https://www.acmicpc.net/problem/16234)
+- [5373]    : 큐빙[(문제)](https://www.acmicpc.net/problem/5373)
+- [15686]    : 치킨배달[(문제)](https://www.acmicpc.net/problem/15686)
+- [15685]    : 드래곤커브[(문제)](https://www.acmicpc.net/problem/15685)
+- [15684]    : 사다리조작[(문제)](https://www.acmicpc.net/problem/15684)
+- [15683]    : 감시[(문제)](https://www.acmicpc.net/problem/15683)
+- [14891]    : 톱니바퀴[(문제)](https://www.acmicpc.net/problem/14891)
+- [14890]    : 경사로[(문제)](https://www.acmicpc.net/problem/14890)
+- [14889]    : 스타트와링크[(문제)](https://www.acmicpc.net/problem/14889)
+- [14888]    : 연산자끼워넣기[(문제)](https://www.acmicpc.net/problem/14888)
+- [14503]    : 로봇청소기[(문제)](https://www.acmicpc.net/problem/14503)
+- [14502]    : 연구소[(문제)](https://www.acmicpc.net/problem/14502)
+- [14501]    : 퇴사[(문제)](https://www.acmicpc.net/problem/14501)
+- [14500]    : 테트로미노[(문제)](https://www.acmicpc.net/problem/14500)
+- [14499]    : 주사위굴리기[(문제)](https://www.acmicpc.net/problem/14499)
+- [13458]    : 시험감독[(문제)](https://www.acmicpc.net/problem/13458)
+- [3190]    : 뱀[(문제)](https://www.acmicpc.net/problem/3190)
+- [12100]    : 2048(Easy)[(문제)](https://www.acmicpc.net/problem/12100)
+- [13460]    : 구슬탈출2[(문제)](https://www.acmicpc.net/problem/13460)
+
+
 [PROGRAMMERS]
 --------------
 ### 1. Brute Force
@@ -169,6 +198,7 @@ Algorithm-quiz
 - [보행자천국]    : [문제](https://programmers.co.kr/learn/courses/30/lessons/1832)
 - [다트게임]    : [문제](https://programmers.co.kr/learn/courses/30/lessons/17682)
 
+[삼성 SW 역량 테스트 기출 문제]: https://www.acmicpc.net/workbook/view/1152
 [Baekjoon Online Judge]: https://www.acmicpc.net
 [SW EXPERT ACAMEDY]: https://swexpertacademy.com/main/main.do
 [PROGRAMMERS]: https://programmers.co.kr/learn/challenges
