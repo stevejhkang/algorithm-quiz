@@ -209,7 +209,7 @@ Algorithm-quiz
 
 [삼성 SW 역량 테스트 기출 문제]: https://www.acmicpc.net/workbook/view/1152
 [Baekjoon Online Judge]: https://www.acmicpc.net
-[SW EXPERT ACAMEDY]: https://swexpertacademy.com/main/main.do
+[SW Expert Academy]: https://swexpertacademy.com/main/main.do
 [PROGRAMMERS]: https://programmers.co.kr/learn/challenges
 [13460]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/13460.cpp
 
