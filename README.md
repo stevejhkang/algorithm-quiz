@@ -212,8 +212,10 @@ Algorithm-quiz
 [SW Expert Academy]: https://swexpertacademy.com/main/main.do
 [PROGRAMMERS]: https://programmers.co.kr/learn/challenges
 [13460]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/13460.cpp
+[13460]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/13460.cpp
 
-
+[14503]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/14503.cpp
+[14501]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/14501.cpp
 [s_2382]: https://github.com/stevejhkang/algorithm-quiz/blob/master/sw_expert/s_2382.cpp
 [s_2117]: https://github.com/stevejhkang/algorithm-quiz/blob/master/sw_expert/s_2117.cpp
 [5373]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/5373.cpp
