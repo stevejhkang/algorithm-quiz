@@ -203,6 +203,7 @@ Algorithm-quiz
 --------------
 - [s_2382]    : 미생물격리
 - [s_2117]    : 홈방범서비스
+- [s_1953]    : 탈주범검거
 
 
 
@@ -211,9 +212,11 @@ Algorithm-quiz
 [Baekjoon Online Judge]: https://www.acmicpc.net
 [SW Expert Academy]: https://swexpertacademy.com/main/main.do
 [PROGRAMMERS]: https://programmers.co.kr/learn/challenges
+[s_2382]: https://github.com/stevejhkang/algorithm-quiz/blob/master/sw_expert/s_2382.cpp
 [13460]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/13460.cpp
 [13460]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/13460.cpp
 
+[s_1953]: https://github.com/stevejhkang/algorithm-quiz/blob/master/sw_expert/s_1953.cpp
 [14503]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/14503.cpp
 [14501]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/14501.cpp
 [s_2382]: https://github.com/stevejhkang/algorithm-quiz/blob/master/sw_expert/s_2382.cpp
