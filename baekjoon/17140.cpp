@@ -7,143 +7,148 @@
 #include<cstring>
 using namespace std;
 
-int v[100][100];
-//초기화할때 중간에 0 나오면 초기화를 멈추게 해서 뒤에 숫자가 남아있는 경우가 있어서 틀렸음.
+int a[101][101];
+
+typedef struct {
+	int what; int number;
+	unsigned operator==(const int number) {
+		return (what == number);
+	}
+}ope;
+
+bool cmp(const ope &a, const ope &b) {
+	if (a.number <= b.number) {
+		if (a.number == b.number) {
+			if (a.what < b.what) {
+				return true;
+			}
+			return false;
+		}
+		return true;
+	}
+	return false;
+}
 
 int main() {
 	int r, c, k; cin >> r >> c >> k;
-	for (int i = 0; i < 3; i++) {
-		for (int j = 0; j < 3; j++) {
-			cin >> v[i][j];
+	for (int i = 1; i <= 3; i++) {
+		for (int j = 1; j <= 3; j++) {
+			int num; cin >> num;
+			a[i][j] = num;
 		}
 	}
-	int time = 0; //시간 체크
-	int flag = 0; //0일때 행연산(행의 개수(세로)>=열의 개수(가로)), 1일때 열연산(세로<가로)
-	int row_max = 3; //행 최대 길이 저장
-	int col_max = 3; //열 최대 길이 저장
+	int max_r = 3;
+	int max_c = 3;
+	int time = 0;
+	//반복문
 	while (time <= 100) {
-		if (v[r - 1][c - 1] == k) { // 찾으면 출력 후 끝
+		/*for (int i = 1; i < 20; i++) {
+			for (int j = 1; j < 20; j++) {
+				cout << a[i][j] << " ";
+			}
+			cout << endl;
+		}*/
+		if (a[r][c] == k) {
 			cout << time << "\n";
 			return 0;
 		}
-		//행연산: 처음은 행연산
-		if (flag == 0) {
-			int col_end = col_max; col_max = 0; //열의 개수가 변경이 될 수 있으므로 복사해둔다.
-			for (int i = 0; i<row_max; i++) {
-				map<int, int> m; 
-				for (int j = 0; j<col_end; j++) {
-					if (v[i][j] != 0 && m.find(v[i][j]) == m.end()) {//없으면 map에 추가
-						m.insert(make_pair(v[i][j], 1));
+		if (max_r >= max_c) {
+			//R연산: c의길이가 변화
+			max_c = 0;//초기화
+			for (int i = 1; i <= 100; i++) {
+				vector<ope> temp; //숫자들을 담을 배열
+				for (int j = 1; j <= 100; j++) {
+					if (a[i][j] != 0) { //0이 아닐때 카운트해줘야함.
+						vector<ope>::iterator it;
+						it = find(temp.begin(), temp.end(), a[i][j]);
+						if (it == temp.end()) {//못찾았으면 추가
+							ope opeTemp; opeTemp.what = a[i][j];
+							opeTemp.number = 1;
+							temp.push_back(opeTemp);
+						}
+						else { //찾았으면 이미 있는 것이므로 갱신
+							(*it).number += 1;
+						}
 					}
-					else if(v[i][j] != 0) {//있으면 개수를 추가하여 나오는 숫자와 그 개수를 map에 저장
-						m[v[i][j]]++;
+					if (j == 100) {//마지막까지 했으면 정렬해주고 재배치
+						int tempSize = int(temp.size());
+						//컬럼 최댓값 저장: 한번에 두개가 들어가니까 *2
+						if (2 * tempSize > max_c) { 
+							if (tempSize >= 50) {
+								max_c = 100;
+							}
+							else {
+								max_c = 2 * tempSize;
+							}
+						}
+						//빈도수로 오름차순, 빈도수 같으면 숫자크기 오름차순
+						sort(temp.begin(), temp.end(), cmp);
+						//그것들을 배열에 갱신시켜준다.
+						for (int k = 0; k < temp.size(); k++) {
+							if (2 * (k+1) - 1 > 100 || 2 * (k+1) > 100) {
+								break;
+							}
+							a[i][2 * (k+1) - 1] = temp[k].what;
+							a[i][2 * (k+1)] = temp[k].number;
+						}
+						//나머지는 0으로 채워준다.
+						if (2 * tempSize < 100) { 
+							for (int k = 2 * tempSize+1; k <= 100; k++) {
+								a[i][k] = 0;
+							}
+						}
 					}
-				}
-				vector<std::pair<int, int>> temp; //map을 빈도수에 따라 정렬해줄 temp벡터
-				map<int, int>::iterator it;
-				for (it = m.begin(); it != m.end(); it++) { //temp에다 복사하고
-					temp.push_back(make_pair(it->first, it->second));
-				}
-				//pair의 두번째 값을 기준으로 정렬해준다.
-				std::sort(temp.begin(), temp.end(), [](const pair<int, int>& l, const pair<int, int>& r) {
-					if (l.second != r.second)
-						return l.second < r.second;
-					else if (l.second == r.second)
-						return l.first < r.first;
-				}); 
-
-				vector<int> ele;
-				vector<pair<int, int>>::iterator it2; //ele 벡터에 하나씩 다 넣어준다.
-				for (it2 = temp.begin(); it2 != temp.end(); it2++) {
-					ele.push_back(it2->first); ele.push_back(it2->second);
-				}
-				
-				if (col_max<int(ele.size())) {//만약 열의 개수가 크다면 
-					if (int(ele.size()) <= 100) {
-						col_max = int(ele.size()); //열 최대 개수 갱신
-					}
-					else
-						col_max = 100;
-				}
-
-				for (int j = 0; j < 100; j++) {
-					if (j < ele.size()) { //i번째 행을 갱신시켜준다.
-						v[i][j] = ele[j];
-					}
-					else
-						v[i][j] = 0; //나머지는 0으로 리셋
 				}
 			}
-			/*cout << time << endl;
-			for (int i = 0; i < 50; i++) {
-				for (int j = 0; j < 50; j++) {
-					printf("%2d", v[i][j]);
-				}
-				cout << endl;
-			}*/
 		}
-		//열연산
-		else {
-			int row_end = row_max; row_max = 0; //행의 최대 개수가 갱신이 되므로 복사해둔다.
-			for (int i = 0; i<col_max; i++) { //i가 이번엔 열로 들어가서 나중에 처리
-				map<int, int> m; //개수를 세기 위한 map 
-				//한 열씩 연산 시작
-				for (int j = 0; j < row_end; j++) {
-					if (v[j][i]!=0&&m.find(v[j][i]) == m.end()) {//없으면 map에 추가
-						m.insert(make_pair(v[j][i], 1));
+		else if (max_r < max_c) {//C연산 r의 길이가 변화
+			max_r = 0;
+			for (int j = 1; j <= 100; j++) {
+				vector<ope> temp;
+				for (int i = 1; i <= 100; i++) {
+					
+					if (a[i][j] != 0) {
+						vector<ope>::iterator it;
+						it = find(temp.begin(), temp.end(), a[i][j]);
+						if (it == temp.end()) {//못찾았으면 추가
+							ope opeTemp; opeTemp.what = a[i][j];
+							opeTemp.number = 1;
+							temp.push_back(opeTemp);
+						}
+						else { //찾았으면 이미 있는 것이므로 갱신
+							(*it).number += 1;
+						}
 					}
-					else if (v[j][i] != 0) {//있으면 개수를 추가.
-						m[v[j][i]]++;
+					
+					if (i == 100) {//마지막까지 했으면 정렬해주고 재배치
+						int tempSize = int(temp.size());
+						if (2 * tempSize > max_r) {
+							if (tempSize >= 50) {
+								max_r = 100;
+							}
+							else {
+								max_r = 2 * tempSize;
+							}
+						}
+						sort(temp.begin(), temp.end(), cmp);
+						for (int k = 0; k < temp.size(); k++) {
+							if (2 * (k+1) - 1 > 100 || 2 * (k+1) > 100) {
+								break;
+							}
+							a[2 * (k+1) - 1][j] = temp[k].what;
+							a[2*(k+1)][j] = temp[k].number;
+						}
+						if (2 * tempSize < 100) {
+							for (int k = 2 * tempSize + 1; k <= 100; k++) {
+								a[k][j] = 0;
+							}
+						}
 					}
-				}
-
-				vector<std::pair<int, int>> temp; //map을 정렬해줄 temp벡터
-				map<int, int>::iterator it;
-				for (it = m.begin(); it != m.end(); it++) {
-					temp.push_back(make_pair(it->first, it->second));
-				}
-				std::sort(temp.begin(), temp.end(), [](const pair<int, int>& l, const pair<int, int>& r) {
-					if (l.second != r.second)
-						return l.second < r.second;
-					else if(l.second==r.second)
-						return l.first < r.first;
-				}); //pair의 두번째 값을 기준으로 정렬해준다.
-				
-				//새로 숫자 만드는 과정: 여기서 해당 행의 배열을 리셋해주어야 한다.
-				vector<int> ele;
-				vector<pair<int, int>>::iterator it2; //하나씩 다 넣어준다.
-				for (it2 = temp.begin(); it2 != temp.end(); it2++) {
-					ele.push_back(it2->first); ele.push_back(it2->second);
-				}
-				if (row_max<int(ele.size())) {
-					if (int(ele.size()) <= 100) {
-						row_max = int(ele.size()); //열 최대 개수 갱신
-					}
-					else
-						row_max = 100;
-				}
-				for (int j = 0; j < 100; j++) {
-					if (j < ele.size()) {
-						v[j][i] = ele[j];
-					}
-					else
-						v[j][i] = 0; //나머지는 0으로 넣어준다.
 				}
 			}
-			/*cout << time << endl;
-			for (int i = 0; i < 50; i++) {
-				for (int j = 0; j < 50; j++) {
-					printf("%2d", v[i][j]); 
-				}
-				cout << endl;
-			}*/
 		}
 		time++;
-		
-		if (row_max >= col_max) flag = 0;
-		else flag = 1;
 	}
-	if (time == 101)
-		cout << -1 << "\n";
+	cout << -1 << "\n";
 	return 0;
 }
