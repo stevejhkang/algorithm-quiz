@@ -120,15 +120,11 @@ int main() {
 			}
 		}
 		//데이터 갱신
-		for (int i = 0; i < r; i++) {
-			for (int j = 0; j < c; j++) {
-				loc[i][j] = loc_temp[i][j];
-				v[i][j] = v_temp[i][j];
-				//cout << loc[i][j] << " ";
-			}
-			//cout << "\n";
-		}
-		//cout << "\n";
+		loc.clear(); loc.resize(int(loc_temp.size()));
+		copy(loc_temp.begin(), loc_temp.end(), loc.begin());
+		v.clear(); v.resize(int(v_temp.size()));
+		copy(v_temp.begin(), v_temp.end(), v.begin());
+        
 		svector2.clear(); svector2.resize(int(svector_temp2.size()));
 		copy(svector_temp2.begin(),svector_temp2.end(),svector2.begin());
 		time++;
