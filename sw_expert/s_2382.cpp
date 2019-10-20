@@ -35,7 +35,7 @@ int main() {
 		sum = 0;
 		cin >> n >> m >> k;
 		//vector<vector<int> > v(n + 1, vector<int>(n + 1));
-		vector<vector<mis> > q(1003);
+		vector<mis>  q;
 		//vector<map<pair<int, int>, mis > > q(1003);
 		for (int i = 0; i < k; i++) {
 			int y, x, num, dir;
@@ -61,9 +61,9 @@ int main() {
 				temp.y = y; temp.x = x; temp.num = num;
 				temp.dir = dir;
 			}
-			q[1].push_back(temp); //m이 1일때
+			q.push_back(temp); //m이 1일때
 		}
-		sort(q[1].begin(), q[1].end(), cmp);
+		sort(q.begin(), q.end(), cmp);
 		/*for (int i = 0; i < q[1].size(); i++) {
 			cout << q[1][i].num << " ";
 		}*/
@@ -71,6 +71,7 @@ int main() {
 		int time = 1;
 		while (time <= m) {
 			vector<vector<mis> > Vtemp(n, vector<mis>(n)); //미생물 담을 벡터
+			vector<mis>Qtemp;
 			/*for (int i = 0; i < n; i++) {
 			for (int j = 0; j < n; j++) {
 			cout << Vtemp[i][j].num << " ";
@@ -78,11 +79,11 @@ int main() {
 			cout << endl;
 			}*/
 			
-			for (int i=0 ; i< q[time].size(); i++) {
+			for (int i=0 ; i< q.size(); i++) {
 				//한개씩 미생물 군집을 가져와서 새로운 거(Vtemp)에 넣는다.
 				mis temp;
-				int y = q[time][i].y; int x = q[time][i].x;
-				int num = q[time][i].num; int dir = q[time][i].dir;
+				int y = q[i].y; int x = q[i].x;
+				int num = q[i].num; int dir = q[i].dir;
 				int ny = y + dy[dir]; int nx = x + dx[dir];
 
 				//약품구역으로 가면
@@ -94,13 +95,13 @@ int main() {
 						continue;
 					//0이 아니면 다음 시간에 군집벡터에 넣어준다.
 					temp.y = ny; temp.x = nx; temp.num = num; temp.dir = dir;
-					q[time+1].push_back(temp);
+					Qtemp.push_back(temp);
 					//그리고 새로운 Vtemp에도 넣어준다.
 					Vtemp[ny][nx] = temp;
 				}
 				else if (Vtemp[ny][nx].num == 0) {//빈칸일때는 그냥 넣어준다.
 					temp.y = ny; temp.x = nx; temp.num = num; temp.dir = dir;
-					q[time + 1].push_back(temp);
+					Qtemp.push_back(temp);
 					Vtemp[ny][nx] = temp;
 				}
 				else if (Vtemp[ny][nx].num != 0) {
@@ -111,11 +112,11 @@ int main() {
 					Vtemp[ny][nx].num = temp.num; //맵의 값 갱신
 					//벡터의 값 갱신
 					vector<mis>::iterator it;
-					it = find(q[time + 1].begin(), q[time + 1].end(), make_pair(ny, nx));
+					it = find(Qtemp.begin(), Qtemp.end(), make_pair(ny, nx));
 					(*it).num = temp.num;
 				}
 			}
-			sort(q[time + 1].begin(), q[time + 1].end(), cmp);
+			sort(Qtemp.begin(), Qtemp.end(), cmp);
 			if (time == m) {//m시간이 되면 개수를 파악한다.
 				for (int i = 0; i < n; i++) {
 					for (int j = 0; j < n; j++) {
@@ -124,6 +125,8 @@ int main() {
 				}
 			}
 			time++;
+			q.clear(); q.resize(int(Qtemp.size()));
+			copy(Qtemp.begin(), Qtemp.end(), q.begin());
 		}
 		answers.push_back(sum);
 	}
