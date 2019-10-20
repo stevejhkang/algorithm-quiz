@@ -129,10 +129,8 @@ int main() {
 			//cout << "\n";
 		}
 		//cout << "\n";
-		svector2.clear();
-		for (int j = 0; j < svector_temp2.size(); j++) {
-			svector2.push_back(svector_temp2[j]);
-		}
+		svector2.clear(); svector2.resize(int(svector_temp2.size()));
+		copy(svector_temp2.begin(),svector_temp2.end(),svector2.begin());
 		time++;
 	}
 	cout << sum << "\n";
