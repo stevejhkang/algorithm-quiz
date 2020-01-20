@@ -204,11 +204,12 @@ Algorithm-quiz
 - [SWEA_2382]    : 2382. 미생물격리
 - [SWEA_2117]    : 2117. 홈방범서비스
 - [SWEA_1953]    : 1953. 탈주범검거
+- [SWEA_2382]    : 2382. 미생물 격리
 - [SWEA_1289]    : 1289. 원재의 메모리 복구하기
 - [SWEA_2050]    : 2050. 알파벳을 숫자로 변환
-
-
-
+- [SWEA_2056]    : 2056. 연월일 달력
+- [SWEA_2058]    : 2058. 자릿수 더하기
+- [SWEA_5215]    : 5215. 햄버거 다이어트
 
 
 
@@ -216,7 +217,11 @@ Algorithm-quiz
 [Baekjoon Online Judge]: https://www.acmicpc.net
 [SW Expert Academy]: https://swexpertacademy.com/main/main.do
 [PROGRAMMERS]: https://programmers.co.kr/learn/challenges
-[SWEA_2382]: https://github.com/stevejhkang/algorithm-quiz/blob/master/sw_expert/SWEA_2382.cpp
+[SWEA_1289]: https://github.com/stevejhkang/algorithm-quiz/blob/master/sw_expert/SWEA_1289.java
+[SWEA_2050]: https://github.com/stevejhkang/algorithm-quiz/blob/master/sw_expert/SWEA_2050.java
+[SWEA_2056]: https://github.com/stevejhkang/algorithm-quiz/blob/master/sw_expert/SWEA_2056.java
+[SWEA_2058]: https://github.com/stevejhkang/algorithm-quiz/blob/master/sw_expert/SWEA_2058.java
+[SWEA_5215]: https://github.com/stevejhkang/algorithm-quiz/blob/master/sw_expert/SWEA_5215.java
 [13460]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/13460.cpp
 [13460]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/13460.cpp
 
