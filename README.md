@@ -210,6 +210,8 @@ Algorithm-quiz
 - [SWEA_2056]    : 2056. 연월일 달력
 - [SWEA_2058]    : 2058. 자릿수 더하기
 - [SWEA_5215]    : 5215. 햄버거 다이어트
+- [SWEA_1204]    : 1204. 최빈수 구하기
+- [SWEA_2063]    : 2063. 중간값 찾기
 
 
 
@@ -217,6 +219,11 @@ Algorithm-quiz
 [Baekjoon Online Judge]: https://www.acmicpc.net
 [SW Expert Academy]: https://swexpertacademy.com/main/main.do
 [PROGRAMMERS]: https://programmers.co.kr/learn/challenges
+[SWEA_1289]: https://github.com/stevejhkang/algorithm-quiz/blob/master/sw_expert/SWEA_1289.java
+[SWEA_1289]: https://github.com/stevejhkang/algorithm-quiz/blob/master/sw_expert/SWEA_1289.java
+
+[SWEA_2063]: https://github.com/stevejhkang/algorithm-quiz/blob/master/sw_expert/SWEA_2063.java
+[SWEA_1204]: https://github.com/stevejhkang/algorithm-quiz/blob/master/sw_expert/SWEA_1204.java
 [SWEA_1289]: https://github.com/stevejhkang/algorithm-quiz/blob/master/sw_expert/SWEA_1289.java
 [SWEA_2050]: https://github.com/stevejhkang/algorithm-quiz/blob/master/sw_expert/SWEA_2050.java
 [SWEA_2056]: https://github.com/stevejhkang/algorithm-quiz/blob/master/sw_expert/SWEA_2056.java
