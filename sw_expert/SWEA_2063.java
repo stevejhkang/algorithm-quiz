@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class Solution {
+public class SWEA_2063 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
