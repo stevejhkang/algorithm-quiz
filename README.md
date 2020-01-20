@@ -212,15 +212,15 @@ Algorithm-quiz
 [Baekjoon Online Judge]: https://www.acmicpc.net
 [SW Expert Academy]: https://swexpertacademy.com/main/main.do
 [PROGRAMMERS]: https://programmers.co.kr/learn/challenges
-[swea_2382]: https://github.com/stevejhkang/algorithm-quiz/blob/master/sw_expert/swea_2382.cpp
+[SWEA_2382]: https://github.com/stevejhkang/algorithm-quiz/blob/master/sw_expert/SWEA_2382.cpp
 [13460]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/13460.cpp
 [13460]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/13460.cpp
 
-[swea_1953]: https://github.com/stevejhkang/algorithm-quiz/blob/master/sw_expert/swea_1953.cpp
+[SWEA_1953]: https://github.com/stevejhkang/algorithm-quiz/blob/master/sw_expert/SWEA_1953.cpp
 [14503]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/14503.cpp
 [14501]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/14501.cpp
-[swea_2382]: https://github.com/stevejhkang/algorithm-quiz/blob/master/sw_expert/swea_2382.cpp
-[swea_2117]: https://github.com/stevejhkang/algorithm-quiz/blob/master/sw_expert/swea_2117.cpp
+[SWEA_2382]: https://github.com/stevejhkang/algorithm-quiz/blob/master/sw_expert/SWEA_2382.cpp
+[SWEA_2117]: https://github.com/stevejhkang/algorithm-quiz/blob/master/sw_expert/SWEA_2117.cpp
 [5373]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/5373.cpp
 [2529]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/2529.cpp
 [2178]: https://github.com/stevejhkang/algorithm-quiz/blob/master/baekjoon/2178.cpp
