@@ -201,16 +201,19 @@ Algorithm-quiz
 
 [SW Expert Academy]
 --------------
-- [SWEA_2382]    : 2382. 미생물격리
-- [SWEA_2117]    : 2117. 홈방범서비스
-- [SWEA_1953]    : 1953. 탈주범검거
-- [SWEA_1289]    : 1289. 원재의 메모리 복구하기
-- [SWEA_2050]    : 2050. 알파벳을 숫자로 변환
-- [SWEA_2056]    : 2056. 연월일 달력
-- [SWEA_2058]    : 2058. 자릿수 더하기
-- [SWEA_5215]    : 5215. 햄버거 다이어트
-- [SWEA_1204]    : 1204. 최빈수 구하기
-- [SWEA_2063]    : 2063. 중간값 찾기
+- [SWEA_2382]    : 2382. 
+- [SWEA_2117]    : 2117. 
+- [SWEA_1953]    : 1953. 
+- [SWEA_1289]    : 1289. 
+- [SWEA_2050]    : 2050. 
+- [SWEA_2056]    : 2056. 
+- [SWEA_2058]    : 2058. 
+- [SWEA_5215]    : 5215. 
+- [SWEA_1204]    : 1204. 
+- [SWEA_2063]    : 2063. 
+- [SWEA_1210]    : 1210.
+- [SWEA_9229]    : 9229.
+- [SWEA_5336]    : 5336.
 
 
 
@@ -218,9 +221,12 @@ Algorithm-quiz
 [Baekjoon Online Judge]: https://www.acmicpc.net
 [SW Expert Academy]: https://swexpertacademy.com/main/main.do
 [PROGRAMMERS]: https://programmers.co.kr/learn/challenges
-[SWEA_1289]: https://github.com/stevejhkang/algorithm-quiz/blob/master/sw_expert/SWEA_1289.java
-[SWEA_1289]: https://github.com/stevejhkang/algorithm-quiz/blob/master/sw_expert/SWEA_1289.java
+[SWEA_1210]: https://github.com/stevejhkang/algorithm-quiz/blob/master/sw_expert/SWEA_1210.java\
+[SWEA_1210]: https://github.com/stevejhkang/algorithm-quiz/blob/master/sw_expert/SWEA_1210.java
 
+[SWEA_1210]: https://github.com/stevejhkang/algorithm-quiz/blob/master/sw_expert/SWEA_1210.java
+[SWEA_9229]: https://github.com/stevejhkang/algorithm-quiz/blob/master/sw_expert/SWEA_9229.java
+[SWEA_5336]: https://github.com/stevejhkang/algorithm-quiz/blob/master/sw_expert/SWEA_5336.java
 [SWEA_2063]: https://github.com/stevejhkang/algorithm-quiz/blob/master/sw_expert/SWEA_2063.java
 [SWEA_1204]: https://github.com/stevejhkang/algorithm-quiz/blob/master/sw_expert/SWEA_1204.java
 [SWEA_1289]: https://github.com/stevejhkang/algorithm-quiz/blob/master/sw_expert/SWEA_1289.java
