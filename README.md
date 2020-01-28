@@ -181,6 +181,8 @@ Algorithm-quiz
 --------------
 ### 1. Brute Force
 - [모의고사]    : [문제](https://programmers.co.kr/learn/courses/30/lessons/42840)
+- [소수찾기]    : [문제](https://programmers.co.kr/learn/courses/30/lessons/42839)
+- [K번째수]    : [문제](https://programmers.co.kr/learn/courses/30/lessons/42842)
 
 ### 2. Dynamic Programming
 - [등굣길]    : [문제](https://programmers.co.kr/learn/courses/30/lessons/42898)
@@ -193,10 +195,28 @@ Algorithm-quiz
 
 ### 4. Stack/Queue
 - [프린터]    : [문제](https://programmers.co.kr/learn/courses/30/lessons/42587)
+- [탑]    : [문제](https://programmers.co.kr/learn/courses/30/lessons/42588)
+- [다리를지나는트럭]    : [문제](https://programmers.co.kr/learn/courses/30/lessons/42583)
+- [기능개발]    : [문제](https://programmers.co.kr/learn/courses/30/lessons/42586)
+- [쇠막대기]    : [문제](https://programmers.co.kr/learn/courses/30/lessons/42585)
 
-### 5. 2017 Kakao
+### 5. Hash
+- [완주하지못한선수]    : [문제](https://programmers.co.kr/learn/courses/30/lessons/42576)
+- [전화번호목록]    : [문제](https://programmers.co.kr/learn/courses/30/lessons/42577)
+- [위장]    : [문제](https://programmers.co.kr/learn/courses/30/lessons/42578)
+
+### 6. Heap
+- [더맵게]    : [문제](https://programmers.co.kr/learn/courses/30/lessons/42626)
+- [라면]    : [문제](https://programmers.co.kr/learn/courses/30/lessons/42629)
+
+### 7.Sort
+- [K번째수]    : [문제](https://programmers.co.kr/learn/courses/30/lessons/42748)
+
+
+### 2017 Kakao
 - [보행자천국]    : [문제](https://programmers.co.kr/learn/courses/30/lessons/1832)
 - [다트게임]    : [문제](https://programmers.co.kr/learn/courses/30/lessons/17682)
+
 
 
 [SW Expert Academy]
@@ -221,9 +241,25 @@ Algorithm-quiz
 [Baekjoon Online Judge]: https://www.acmicpc.net
 [SW Expert Academy]: https://swexpertacademy.com/main/main.do
 [PROGRAMMERS]: https://programmers.co.kr/learn/challenges
-[SWEA_1210]: https://github.com/stevejhkang/algorithm-quiz/blob/master/sw_expert/SWEA_1210.java\
-[SWEA_1210]: https://github.com/stevejhkang/algorithm-quiz/blob/master/sw_expert/SWEA_1210.java
 
+[더맵게]:https://github.com/stevejhkang/algorithm-quiz/blob/master/programmers/42840.cpp
+
+[모의고사]:https://github.com/stevejhkang/algorithm-quiz/blob/master/programmers/42840.cpp
+[소수찾기]:https://github.com/stevejhkang/algorithm-quiz/blob/master/programmers/PRGS_42839.java
+[카펫]:https://github.com/stevejhkang/algorithm-quiz/blob/master/programmers/PRGS_42842.java
+[K번째수]:https://github.com/stevejhkang/algorithm-quiz/blob/master/programmers/PRGS_42748.java
+[더맵게]:https://github.com/stevejhkang/algorithm-quiz/blob/master/programmers/PRGS_42626.java
+[라면공장]:https://github.com/stevejhkang/algorithm-quiz/blob/master/programmers/PRGS_42629.java
+[쇠막대기]:https://github.com/stevejhkang/algorithm-quiz/blob/master/programmers/PRGS_42585.java
+[기능개발]:https://github.com/stevejhkang/algorithm-quiz/blob/master/programmers/42586.cpp
+[다리를지나는트럭]:https://github.com/stevejhkang/algorithm-quiz/blob/master/programmers/PRGS_42583.java
+[탑]:https://github.com/stevejhkang/algorithm-quiz/blob/master/programmers/42588.cpp
+[SWEA_1210]: https://github.com/stevejhkang/algorithm-quiz/blob/master/sw_expert/SWEA_1210.java
+[SWEA_1210]: https://github.com/stevejhkang/algorithm-quiz/blob/master/sw_expert/SWEA_1210.java
+[완주하지못한선수]:https://github.com/stevejhkang/algorithm-quiz/blob/master/programmers/42576.cpp
+[전화번호목록]:https://github.com/stevejhkang/algorithm-quiz/blob/master/programmers/42577.py
+[위장]:https://github.com/stevejhkang/algorithm-quiz/blob/master/programmers/PRGS_42578.java
+[단어변환]:https://github.com/stevejhkang/algorithm-quiz/blob/master/programmers/43163.cpp
 [SWEA_1210]: https://github.com/stevejhkang/algorithm-quiz/blob/master/sw_expert/SWEA_1210.java
 [SWEA_9229]: https://github.com/stevejhkang/algorithm-quiz/blob/master/sw_expert/SWEA_9229.java
 [SWEA_5336]: https://github.com/stevejhkang/algorithm-quiz/blob/master/sw_expert/SWEA_5336.java
