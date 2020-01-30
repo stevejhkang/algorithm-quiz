@@ -13,17 +13,17 @@ public class NextPermutationTest {
 	}
 	private static boolean nextPermutation() {
 		int i;
-		//step1: µÚ¿¡¼­ºÎÅÍ arr[i]<arr[i+1]°¡ ¼º¸³ÇÏ´Â Ã³À½ i¸¦ ±¸ÇÏ±â 
+		//step1: ë§¨ë’¤ì—ì„œ ì²˜ìŒìœ¼ë¡œ a[i]<a[i+1]ì´ ë˜ëŠ” ië¥¼ ì°¾ëŠ”ë‹¤.
 		for(i=src.length-1-1; i>=0;i--) { 
 			if(src[i]<src[i+1]) {
 				break;
 			}
 		}
-		//i¸¦ Ã£Áö ¸øÇÏ¸é -1ÀÌ¸é ¸¶Áö¸·ÀÌ¹Ç·Î false
+		//ë§Œì•½ ê·¸ëŸ° ië¥¼ ì°¾ì§€ ëª»í•˜ë©´ iëŠ” -1ì´ ë˜ë¯€ë¡œ false return
 		if(i<0)
 			return false; 
 		
-		//step2: µÚ¿¡¼­ºÎÅÍ arr[i]<arr[j]°¡ ¼º¸³ÇÏ´Â Ã³À½ j¸¦ ±¸ÇÏ±â
+		//step2: ë§¨ë’¤ì—ì„œ ì²˜ìŒì˜¤ë¥´ a[i]ë³´ë‹¤ í° a[j]ë¥¼ ì°¾ëŠ”ë‹¤.
 		int j;
 		for(j=src.length-1;j>i;j--) {
 			if(src[i]<src[j]) {
@@ -31,12 +31,12 @@ public class NextPermutationTest {
 			}
 		}
 		
-		//step3: ½º¿ÒÇØÁØ´Ù.
+		//step3: a[i]ì™€ a[j]ë¥¼ ë°”ê¾¼ë‹¤.
 		int temp= src[i];
 		src[i]=src[j];
 		src[j]=temp;
 		
-		//step4: i+1ºÎÅÍ ³¡±îÁö reverse ½ÃÄÑÁØ´Ù.
+		//step4: i+1ë¶€í„° ë§ˆì§€ë§‰ê¹Œì§€ ìˆ«ìë¥¼ ë°”ê¿”ì¤€ë‹¤.
 		int start=i+1; int end=src.length-1;
 		while(start<end) {
 			int a = src[start];
@@ -44,9 +44,6 @@ public class NextPermutationTest {
 			src[end]=a;
 			start++; end--;
 		}
-		
-		
-		
 		return true;
 	}
 
