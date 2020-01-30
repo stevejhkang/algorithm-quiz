@@ -2,7 +2,7 @@ package boj;
 
 import java.util.Scanner;
 
-//���
+//해당 좌표로 어떻게 인덱스를 생성할지를 재귀를 통해 풀려고 노력한다.
 public class BOJ_1074 {
 
 	public static void main(String[] args) {
