@@ -1,5 +1,8 @@
 package boj;
 
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
@@ -19,12 +22,14 @@ public class BOJ_17281 {
 	static int n; //이닝 수
 	static ArrayList<int[]> li = new ArrayList<>(); //타순을 결정한 배열
 	static int max;
-
+	static File file = new File("res\\test.txt");
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Scanner scanner = new Scanner(System.in);
 		n = scanner.nextInt(); //이닝 수
 		player = new int[9][n]; //9플레이어 n이닝
+		
+		
 		
 		for (int i = 0; i < n; i++) {
 			for (int j = 0; j < 9; j++) {
@@ -39,7 +44,7 @@ public class BOJ_17281 {
 	}
 
 	static void recursion(int r, int m) {
-		if (r == m - 1) {
+		if (r == m - 1) { //8명의 선수를 뽑으면
 			// 0번 선수를 3번인덱스에 껴넣는다.
 			int[] temp = new int[n];
 			for (int i = 0; i < player[0].length; i++) {
@@ -54,17 +59,37 @@ public class BOJ_17281 {
 //				}
 //				System.out.println("");
 //			}
+//			try {
+//				FileWriter fw = new FileWriter(file,true);
+//				for(int i=0;i<li.size();i++) {
+//					for(int j=0;j<n;j++) {
+////						System.out.print(li.get(i)[j]+" ");
+//						 fw.write(li.get(i)[j]+" ");
+//					}
+////					System.out.println("");
+//					fw.write("\n");
+//				}
+//				fw.write("\n");
+//				fw.close();
+//			}
+//			catch (IOException e) {
+//				// TODO: handle exception
+//				e.printStackTrace();
+//			}
 			int now_player = -1; //처음 시작할때 +1하므로 -1부터 시작
 			int sum = 0; //n이닝 돌렸을때 점수
 			//n이닝까지 돌린다.
 			for (int i = 0; i < n; i++) { 
 				int out = 0;
 				int[] mound = new int[3]; //마운드 표시 이닝마다 초기화
+				//i번째 이닝 시작
+//				System.out.println("");
 				while (out < 3) {
 					now_player = (now_player + 1) % 9; // 마지막 아웃된 선수 다음이므로
 
 					int[] arr = li.get(now_player); // 그 선수의 이닝별 결과
 					// arr[i]=그 선수의 이닝별 결과 중 i이닝 결과
+					System.out.print(arr[i]+" ");
 					if (arr[i] == 0) { //0이면 아웃
 						out++;
 						//쓰리아웃 체인지
@@ -78,8 +103,9 @@ public class BOJ_17281 {
 							if (arr[i] + k >= 3) { // 현재 선수가 친 결과를 더했을때 3이상이되면 홈에 들어온 것이므로 sum++해주고 0처리한다.
 								sum++;
 								mound[k] = 0;
-							} else { // 안넘으면 그냥 arr[i] 앞으로 보내준다.	
-								mound[k] =1;
+							} else { // 안넘으면 그냥 arr[i]만큼 진루한다.
+								mound[k]=0;
+								mound[k+arr[i]] =1;
 							}
 						}
 					}
