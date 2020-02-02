@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 import org.omg.PortableInterceptor.SYSTEM_EXCEPTION;
 
-public class SWEA_dalpangee {
+public class SWEA_1954 {
 	
 	static int[] dx= {1,0,-1,0};
 	static int[] dy= {0,1,0,-1};
