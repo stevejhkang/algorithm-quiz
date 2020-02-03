@@ -29,8 +29,6 @@ public class BOJ_17281 {
 		n = scanner.nextInt(); //이닝 수
 		player = new int[9][n]; //9플레이어 n이닝
 		
-		
-		
 		for (int i = 0; i < n; i++) {
 			for (int j = 0; j < 9; j++) {
 				player[j][i] = scanner.nextInt(); //j플레이어 i이닝
