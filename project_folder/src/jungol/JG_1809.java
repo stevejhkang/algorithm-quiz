@@ -20,7 +20,7 @@ public class JG_1809 {
 				continue;
 			}
 			while(!stack.isEmpty()) {
-				if(a<stack.peek()) {
+				if(a<=stack.peek()) {
 					sb.append(indexstack.peek()+" ");
 					break;
 				}
