@@ -6,6 +6,7 @@ import java.io.InputStreamReader;
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Scanner;
+import java.util.Stack;
 import java.util.StringTokenizer;
 
 public class BOJ_17070 {
@@ -17,9 +18,12 @@ public class BOJ_17070 {
 //		Scanner scanner =new Scanner(System.in);
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringTokenizer st = new StringTokenizer(br.readLine());
+		
 		n = Integer.parseInt(st.nextToken());
-		map = new int[n+1][n+1];
-		visit = new boolean[3][n+1][n+1];
+		map = new int[n+1][n+1]; //벽확인
+		visit = new boolean[3][n+1][n+1]; //방향별로 탐색여부 체크
+		
+		//벽입력
 		for (int i = 1; i <= n; i++) {
 			st = new StringTokenizer(br.readLine());
 			for(int j=1;j<=n;j++) {
@@ -27,22 +31,31 @@ public class BOJ_17070 {
 				map[i][j]=a;
 			}
 		}
+		//첫 방향은 가로
 		int dir=0;
-		Queue<dot> queue = new LinkedList<>();
-		queue.offer(new dot(1,2,dir));
+		Stack<dot> stack = new Stack<>();
+		stack.push(new dot(1,2,dir));
+		//(1,2)부터 시작한다.
 		int cnt=0;
-		while(!queue.isEmpty()) {
-			dot temp = queue.poll();
+		
+		while(!stack.isEmpty()) {
+			dot temp = stack.pop();
+			//방문했었으면
 			if(visit[temp.dir][temp.y][temp.x]) {
 				continue;
 			}
+			//안했으면 방문표시
+			visit[temp.dir][temp.y][temp.x]=true;
+			
 //			System.out.println(temp.y+":"+temp.x);
 			if(temp.y==n&&temp.x==n) {
 				cnt++;
 				continue;
 			}
+			
 			dir=temp.dir;
 			int ny=temp.y,nx=temp.x;
+			
 			if(dir==0) { //가로 0,1
 				for(int i=0;i<2;i++) {
 					ny=temp.y;nx=temp.x;
@@ -53,8 +66,7 @@ public class BOJ_17070 {
 						ny++; nx++;
 					}
 					if(canMove(ny, nx, i)&&!visit[i][ny][nx]) {
-						
-						queue.offer(new dot(ny,nx,i));
+						stack.push(new dot(ny,nx,i));
 					}
 				}
 			}
@@ -68,7 +80,7 @@ public class BOJ_17070 {
 						ny++;
 					}
 					if(canMove(ny, nx, i)&&!visit[i][ny][nx]) {
-						queue.offer(new dot(ny,nx,i));
+						stack.push(new dot(ny,nx,i));
 					}
 				}
 			}
@@ -85,10 +97,11 @@ public class BOJ_17070 {
 						ny++;
 					}
 					if(canMove(ny, nx, i)&&!visit[i][ny][nx]) {
-						queue.offer(new dot(ny,nx,i));
+						stack.push(new dot(ny,nx,i));
 					}
 				}
 			}
+			
 		}
 		System.out.println(cnt);
 	
@@ -97,16 +110,16 @@ public class BOJ_17070 {
 		boolean bound=(y<=n &&x<=n);
 		boolean wall=true;
 		if(bound) {
-			if(dir==0) {
+			if(dir==0) { //가로
 				if(map[y][x]==1)
 					wall=false;
 					
 			}
-			else if(dir==1) {
+			else if(dir==1) { //대각선
 				if(map[y-1][x]==1||map[y][x]==1||map[y][x-1]==1)
 					wall=false;
 			}
-			else {
+			else { //세로
 				if(map[y][x]==1)
 					wall= false;
 			}
