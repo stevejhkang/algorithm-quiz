@@ -10,186 +10,161 @@ import java.util.List;
 import java.util.Stack;
 import java.util.StringTokenizer;
 
+/**
+ * @author steve.jh.kang@gmail.com
+ * @time 2020. 2. 7. 오후 12:33:50
+ * @category 그래프 DFS와 조합문제
+ * @problem_description
+ * @solving_description  전체 그래프에서 team1들이 이어졌는지를 확인하기 위해선 team2들을 visit을 true처리해준 후 돌리는게 관건. 
+ * 그래프 이어짐을 ArrayList로 만들 줄 아는 것도 중요한 내용
+ */
+
 public class BOJ_17471 {
 	private static int n;
 	private static int[] popul;
-	static ArrayList<popul> team1;
-	static ArrayList<popul> team2;
-	private static boolean[] visit;
-	static int[] visit2;
+	private static List[] li;
+	static boolean visit[];
+	private static ArrayList<Integer> team1;
+	private static ArrayList<Integer> team2;
 	private static int sum1;
 	private static int sum2;
 	private static int min;
-	private static List<Integer> li[];
-	private static boolean flag;
-
-
 	public static void main(String[] args) throws IOException {
 		BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
 		StringTokenizer stringTokenizer = new StringTokenizer(bufferedReader.readLine());
-		n = Integer.parseInt(stringTokenizer.nextToken());
-
-		popul = new int[n+1]; visit= new boolean[n+1];
+		n= Integer.parseInt(stringTokenizer.nextToken());
+		
+		//인구 수를 작성
+		popul =  new int[n+1];
 		stringTokenizer = new StringTokenizer(bufferedReader.readLine());
-		for (int i = 1; i <= n; i++) { //도시 번호 인덱스에 인구수 넣는다.
-			popul[i] = Integer.parseInt(stringTokenizer.nextToken());
+		for(int i=1;i<=n;i++) {
+			popul[i]=Integer.parseInt(stringTokenizer.nextToken());
 		}
-		//연결상태 표시를 위한 리스트
+		
+		//연결상태를 저장 i번에 연결된 마을 인덱스
 		li = new List[n+1];
-		for (int i = 1; i <= n; i++) {
-			li[i]=new ArrayList<>();
+		for(int i=1;i<=n;i++) {
+			li[i]= new ArrayList<Integer>();
 		}
-		//연결상태 표시해준다.
-		for (int i = 1; i <= n; i++) {
-			stringTokenizer = new StringTokenizer(bufferedReader.readLine());
-			int link= Integer.parseInt(stringTokenizer.nextToken());
-			for(int j=0;j<link;j++) {
-				int a = Integer.parseInt(stringTokenizer.nextToken());
-				li[i].add(a);
+		
+		//
+		for(int i=1;i<=n;i++) {
+			stringTokenizer= new StringTokenizer(bufferedReader.readLine());
+			int k = Integer.parseInt(stringTokenizer.nextToken());
+			for(int j=0;j<k;j++) {
+				int dot = Integer.parseInt(stringTokenizer.nextToken());
+				li[i].add(dot);
 			}
 		}
-		//팀을 두개로 나눈다.
-		team1 = new ArrayList<popul>();
-		team2 = new ArrayList<popul>();
+		visit = new boolean[n+1];
+		//선택
+		team1= new ArrayList<Integer>();
+		team2 = new ArrayList<Integer>();
+		sum1=0;
+		sum2=0;
+		min=Integer.MAX_VALUE;
 		
-		sum1=0; sum2=0;
-		min=1000;
-		flag =true;
-		//한쪽만 배정해주면 한쪽은 정해지므로 절반만 해준다.
-		//그리고 팀배정해줄때 팀마다 인구수도 종합해준다.
 		for(int i=n/2;i>=1;i--) {
 			recursion(0, i);
 		}
-		
-		
-		
-		if(min==1000) {
+		if(min==Integer.MAX_VALUE) {
 			System.out.println(-1);
 		}
 		else {
 			System.out.println(min);
 		}
 		
+		
 	}
 	static void recursion(int k, int r) {
 		if(k==r) {
-			for (int i = 1; i <= n; i++) {
-				if(!visit[i]) {//방문 안했으면 team2에 다 배정
-					team2.add(new popul(i, 2));
+			for(int i=1;i<=n;i++) {
+				if(!visit[i]) {
 					sum2+=popul[i];
+					team2.add(i);
 				}
 			}
-		
-			if(min<Math.abs(sum1-sum2)) { //더 크면 연결확인 안하고 초기화
-				team2.clear();
-				sum2=0;
+			if(min<Math.abs(sum1-sum2)) {
+				team2.clear(); sum2=0;
 				return;
 			}
+			if(dfs()) {
+				min=Math.abs(sum1-sum2);
+			}
 			
-//			if(Math.abs(sum1-sum2)==1) {
-//				System.out.println("");
-//				System.out.println("");
-//				System.out.println(team1.toString());
-//				System.out.println(team2.toString());
-//				
-//			}
-			
-			
-			//여기에서 연결되어 있는지 확인
-			dfs();
-//			System.out.println(Math.abs(sum1-sum2));
-			//
-			team2.clear();
-			sum2=0;
+			team2.clear(); sum2=0;
+			return;
 		}
-		//1부터 n까지 1팀에 r개만큼 배정한다.
 		for(int i=1;i<=n;i++) {
 			if(!visit[i]) {
 				visit[i]=true;
-				team1.add(new popul(i, 2));
 				sum1+=popul[i];
+				team1.add(i);
 				recursion(k+1, r);
-				sum1-=popul[i];
 				team1.remove(k);
-				visit[i]=false;
+				sum1-=popul[i];
+				visit[i]= false; 
 			}
 		}
-	}
+	}//recursion
 	
-	static void dfs() {
-		visit2 = new int[n+1];
-		//팀 넘버를 같이 넣어주어야 된다!!!!!!!!!!!!!!!!!!!!!!
-		//team1의 한 인덱스를 스택에 넣는다.
-		Stack<Integer> stack1 = new Stack<>();
-		stack1.push(team1.get(0).idx);
+	static boolean dfs() {
+		boolean visit2[]=new boolean[n+1];
+		boolean flag1= true; 
+		boolean flag2=true;
 		
-		while(!stack1.isEmpty()) {
-			int a= stack1.pop();
-			if(visit2[a]!=1) continue;
-			if(Math.abs(sum1-sum2)==1) {
-				System.out.print(a+"-");
-			}
-			visit2[a]=1;
-			for(int i=0;i<li[a].size();i++) {
-				if(visit2[li[a].get(i)]==0) {//방문 안했으면 넣어준다.
-					stack1.push(li[a].get(i));
+		for(int i=0;i<team2.size();i++) {
+			visit2[team2.get(i)]=true;
+		}
+		Stack<Integer> stack = new Stack<>();
+		stack.push(team1.get(0));
+		while(!stack.isEmpty()) {
+			int now = stack.pop();
+			if(visit2[now]) continue;
+			visit2[now]=true;
+			for(int i=0;i<li[now].size();i++) {
+				int next= (int) li[now].get(i);
+				if(!visit2[next]) {
+					stack.push(next);
 				}
 			}
 		}
 		
-		System.out.println("");
-		//team2의 한 인덱스를 스택에 넣는다.
-		Stack<Integer> stack2 = new Stack<>();
-		stack2.push(team2.get(0).idx);
-		while(!stack2.isEmpty()) {
-			int a = stack2.pop();
-			
-			if(visit2[a]!=2) continue;
-			if(Math.abs(sum1-sum2)==1) 
-				System.out.print(a+"-");
-			visit2[a]=2;
-			for(int i=0;i<li[a].size();i++) {
-				int child_idx=li[a].get(i);
-				if(visit2[child_idx]==0) {//방문 안했으면 넣어준다.
-					stack2.push(li[a].get(i));
-				}
-			}
-		}
-//		System.out.println("");
-		//1번팀이 1번체크 되어 있고
+		//team1을 다 방문했는지 확인한다.
 		for(int i=0;i<team1.size();i++) {
-			int idx= team1.get(i).idx;
-			if(visit2[idx]!=1) {
-				flag=false;
-				break;
+			if(!visit2[team1.get(i)])
+				flag1=false;
+		}
+		
+		//team2방문한 것을 다 초기화
+		for(int i=0;i<team2.size();i++) {
+			visit2[team2.get(i)]=false;
+		}
+		//team1다 방문했다고 초기화
+		for(int i=0;i<team1.size();i++) {
+			visit2[team1.get(i)]=true;
+		}
+		
+		stack.clear();
+		stack = new Stack<>();
+//		System.out.println(team2.size());
+		stack.push(team2.get(0));
+		while(!stack.isEmpty()) {
+			int now = stack.pop();
+			if(visit2[now]) continue;
+			visit2[now]=true;
+			for(int i=0;i<li[now].size();i++) {
+				int next= (int) li[now].get(i);
+				if(!visit2[next]) {
+					stack.push(next);
+				}
 			}
 		}
 		for(int i=0;i<team2.size();i++) {
-			int idx= team2.get(i).idx;
-			if(visit2[idx]!=2) {
-				flag=false;
-				break;
-			}
+			if(!visit2[team2.get(i)])
+				flag2=false;
 		}
-		//2번팀이 2번으로 체크되어 있는지 확인
-		if(flag&&min>Math.abs(sum1-sum2)) {
-			min=Math.abs(sum1-sum2);
-			return;
-		}
-	}
-	static class popul{
-		int idx;
-		int team;
-		public popul(int idx, int team) {
-			super();
-			this.idx = idx;
-			this.team = team;
-		}
-		@Override
-		public String toString() {
-			return "[idx=" + idx + ", team=" + team + "]";
-		}
-		
-	}
-}
+		return flag1&&flag2;
+	}//dfs
+}//last
 
