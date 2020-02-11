@@ -3,7 +3,7 @@ package array;
 import java.util.Arrays;
 import java.util.Comparator;
 
-public class Array2Dim {
+public class Practice_Array2Dim {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

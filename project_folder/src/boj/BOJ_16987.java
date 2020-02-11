@@ -15,6 +15,7 @@ public class BOJ_16987 {
 		if(k==n) {
 			
 		}
+		
 	}
 	static class egg{
 		int endure;

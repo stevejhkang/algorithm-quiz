@@ -15,15 +15,14 @@ import java.util.StringTokenizer;
  * @problem_description
  * @solving_description BFS를 이용한 완전탐색 class에 움직인 거리를 저장하여 최솟값을 갱신하고 지금까지 한 점프
  *                      횟수를 저장하여 0이 되기 전까지 움직일 수 있게한다.
- *                      visit체크할때 점프 남은 수? 거리? 둘다? 이거 생각해보자
- */
+*/
 public class BOJ_1600 {
 	static int k, w, h;
 	static int input[][];
 
 	static int dx[] = { 0, 1, 0, -1, -2, -2, -1, -1, 1, 1, 2, 2 };
 	static int dy[] = { 1, 0, -1, 0, 1, -1, 2, -2, 2, -2, 1, -1 };
-	static int visit[][];
+	static int visit[][][];
 
 	public static void main(String[] args) throws NumberFormatException, IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -33,7 +32,7 @@ public class BOJ_1600 {
 		h = Integer.parseInt(stringTokenizer.nextToken());
 
 		input = new int[w][h];
-		visit = new int[w][h];
+		visit = new int[w][h][2]; //0이 jump_remain 1이 dist
 
 		for (int i = 0; i < w; i++) {
 			stringTokenizer = new StringTokenizer(br.readLine());
@@ -58,9 +57,11 @@ public class BOJ_1600 {
 				return;
 			}
 
-			if (visit[y][x]>jump_remain)
+			//0이 jump_remain 1이 dist
+			if (visit[y][x][0]!=0&&visit[y][x][1]!=0 && visit[y][x][0]>jump_remain&&visit[y][x][1]<dist)
 				continue;
-			visit[y][x] = jump_remain;
+			
+			visit[y][x][0]=jump_remain; visit[y][x][1]=dist;
 
 			// 0~4까지는 사방탐색
 			for (int i = 0; i < 4; i++) {
@@ -68,19 +69,19 @@ public class BOJ_1600 {
 				int nx = x + dx[i];
 				if (ny < 0 || ny >= h || nx < 0 || nx >= w)
 					continue;
-				if (visit[ny][nx]>jump_remain)
+				if (visit[ny][nx][0]!=0&&visit[ny][nx][1]!=0&&visit[ny][nx][0]>jump_remain&&visit[ny][nx][1]<dist+1)
 					continue;
-				if (input[ny][nx] == 0) {
+				if (input[ny][nx] == 0) { //갈 수 있으면
 					queue.offer(new dot(ny, nx, jump_remain, dist + 1));
 				}
 			}
-			if (jump_remain > 0) {
+			if (jump_remain > 0) { //점프할 수 있다.
 				for (int i = 4; i < 12; i++) {
 					int ny = y + dy[i];
 					int nx = x + dx[i];
 					if (ny < 0 || ny >= h || nx < 0 || nx >= w)
 						continue;
-					if (visit[ny][nx]>jump_remain-1) //한번 점프한 것보다 많이 남아있으면 갈 필요없음
+					if (visit[ny][nx][0]!=0&&visit[ny][nx][1]!=0&&visit[ny][nx][0]>(jump_remain-1)&&visit[ny][nx][1]<dist+1)
 						continue;
 					if (input[ny][nx] == 0) {
 						queue.offer(new dot(ny, nx, jump_remain - 1, dist + 1));
@@ -92,6 +93,7 @@ public class BOJ_1600 {
 		System.out.println(-1);
 	}// main
 
+	//점프 남은 횟수, 거리를 담는 점 클래스
 	static class dot {
 		int y;
 		int x;

@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 import javax.print.attribute.standard.NumberUpSupported;
 
-public class ArrayMove4Direction {
+public class Practice_ArrayMove4Direction {
 	static int[] dx= {0,0,-1,1};
 	static int[] dy= {-1,1,0,0};
 	static int[] dx1= {-1,-1,1,1};

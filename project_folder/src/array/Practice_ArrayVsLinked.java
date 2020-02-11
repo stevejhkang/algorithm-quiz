@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
-public class ArrayVsLinked {
+public class Practice_ArrayVsLinked {
 	public static void main(String[] args) {
 		addSequencial(new LinkedList<>());
 		addSequencial(new ArrayList<Integer>());
