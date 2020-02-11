@@ -1,4 +1,4 @@
-package advance;
+package boj;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedReader;

@@ -1,6 +1,6 @@
 package array;
 
-public class Arrayresearch {
+public class Practice_Arrayresearch {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

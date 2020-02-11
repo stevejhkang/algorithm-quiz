@@ -1,4 +1,4 @@
-package advance;
+package jungol;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedReader;
