@@ -57,6 +57,7 @@ public class BOJ_16638 {
 		//앞이 +/-이고 뒤가 *이면  현재것과 이전 결과 값 연산을 해주지 않고 바로 뒤에 두개 묶어서 먼저 연산한 
 		//결과만  dfs시킨다.
 		int a =0;
+		
 		if(index+2<n) {
 			//두개를 비교 
 			char oper1 = input[index-1];
@@ -64,25 +65,25 @@ public class BOJ_16638 {
 			char oper2 = input[index+1];
 			int n2 = Character.getNumericValue(input[index+2]);
 			//뒤가 곱하기이면 무조건 뒤부터 해주고 dfs
-			if((oper1=='+'||oper1=='-')&&oper2=='*') {
+			if((oper1=='+'||oper1=='-')&&oper2=='*') { //+*
 				int temp= calc(n1, oper2, n2);
 				a= calc(num, oper1, temp);
 				dfs(index+4, a); //다다음 숫자는 +4
 				return;
 			}
 			//앞이 곱하기이면 무조건 앞부터
-			else if((oper2=='+'||oper2=='-')&&oper1=='*') {
+			else if((oper2=='+'||oper2=='-')&&oper1=='*') {//*+
 				a= calc(num, oper1, n1);
 				dfs(index+2, a); //다다음 숫자는 +4
 				return;
 			}
+			//++이나 **이면 둘다 해야한다.
+			int temp= calc(n1, oper2, n2);
+			a= calc(num, oper1, temp);
+			dfs(index+4, a); //다다음 숫자는 +4
+			
 		}
-		//길이가 작을땐 무조건 앞부터
-		a=0;
-		char oper = input[index-1];
-		int b = Character.getNumericValue(input[index]);
-		a= calc(num, oper, b);
-		dfs(index+2, a); //다음숫자는 +2
+
 	
 	}
 	//두 숫자 연산

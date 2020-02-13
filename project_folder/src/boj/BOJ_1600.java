@@ -15,7 +15,7 @@ import java.util.StringTokenizer;
  * @problem_description
  * @solving_description BFS를 이용한 완전탐색 class에 움직인 거리를 저장하여 최솟값을 갱신하고 지금까지 한 점프
  *                      횟수를 저장하여 0이 되기 전까지 움직일 수 있게한다.
- */
+*/
 public class BOJ_1600 {
 	static int k, w, h;
 	static int input[][];
