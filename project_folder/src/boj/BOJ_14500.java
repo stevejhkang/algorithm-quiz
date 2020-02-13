@@ -96,6 +96,7 @@ public class BOJ_14500 {
 		if(canMove(i, j+1)&&canMove(i, j+2)&&canMove(i+1, j+1)) {
 			temp=map[i][j+1]+map[i][j+2]+map[i+1][j+1]+map[i][j];
 		}
+		max_temp=Math.max(max_temp, temp);
 		max=Math.max(max_temp, max);
 	}
 	static class dot {
