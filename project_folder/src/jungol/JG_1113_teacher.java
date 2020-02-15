@@ -10,11 +10,13 @@ import java.util.Scanner;
 import java.util.StringTokenizer;
 
 /**
- * Backtracking
- * DFS 시뮬레이션 문제
- * 가지치기 안하면 시간터짐
- */
-
+ * @author steve.jh.kang@gmail.com
+ * @time 2020. 2. 15. 오후 4:59:23
+ * @category DFS+시뮬레이션 문제
+* @problem_description
+* @solving_description  다음 탐색할 곳에 저장된 턴 수보다 현재 탐색하고 
+* 있는 것이 더 작으면 들어가서 갱신해야 한다.
+*/
 public class JG_1113_teacher {
 	private static int N,n;
 	private static int M,m;
@@ -29,33 +31,48 @@ public class JG_1113_teacher {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		
 		StringTokenizer stringTokenizer = new StringTokenizer(br.readLine()," ");
-		M = Integer.valueOf(stringTokenizer.nextToken());
-		N=Integer.parseInt(stringTokenizer.nextToken());
+		M = Integer.valueOf(stringTokenizer.nextToken()); //세로
+		N=Integer.parseInt(stringTokenizer.nextToken()); //가로
 		
-		 stringTokenizer = new StringTokenizer(br.readLine()," ");
-		m=Integer.parseInt(stringTokenizer.nextToken());
-		n=Integer.parseInt(stringTokenizer.nextToken());
+		stringTokenizer = new StringTokenizer(br.readLine()," ");
+		m=Integer.parseInt(stringTokenizer.nextToken()); //목표점 세로
+		n=Integer.parseInt(stringTokenizer.nextToken()); //목표점 가로
 		
-		map= new int[M][N];
-		for(int i=0;i<M;i++) {
+		map= new int[N][M];
+		for(int i=0;i<N;i++) {
 			String str = br.readLine();
-			for(int j=0, index =0;j<N;j++,index+=2) {
+			for(int j=0, index =0;j<M;j++,index+=2) { //띄어쓰기를 무시하기위해 index를 2씩 증가해준다.
 				map[i][j]= str.charAt(index)-'0'; 
 			}
 		}
+		System.out.println("");
+		
+		for(int i=0;i<N;i++) {
+			for(int j=0;j<M;j++) { //띄어쓰기를 무시하기위해 index를 2씩 증가해준다.
+				System.out.print(map[i][j]+" ");
+			}
+			System.out.println("");
+		}
+		//그렇게해서 i,j까지 도달하는데 최소한의 턴을 BFS통해 갱신하고
 		bfs();
-		System.out.println(visited[m][n]);
+		//visit[n][m]에 저장된 최소를 출력한다.
+		System.out.println(visited[n][m]);
 	}
 	public static void bfs() {
 		Queue<Local> queue = new LinkedList<>();
 		//무엇을 저장해야할 것인가? 좌표 y,x 방향, 턴한 횟수
-		visited = new int [M][N];//턴의 개수로 방문여부를 체크
-		for(int i=0;i<M;i++) {
-			for(int j=0;j<N;j++) {
+		
+		//해당 좌표에서 턴한 횟수의 최솟값을 저장한다.
+		visited = new int [N][M];//턴의 개수로 방문여부를 체크
+		//최솟값을 저장해야하므로 max값으로 초기화
+		for(int i=0;i<N;i++) {
+			for(int j=0;j<M;j++) {
 				visited[i][j]=Integer.MAX_VALUE;
 			}
 		}
-		visited[0][0]=0; //시작 정점 지정
+		
+		visited[0][0]=0; //시작 정점은 0으로 지정
+		//오른쪽과 아래로만 시작할 수 있으므로
 		queue.offer(new Local(0, 0, 0, DOWN));
 		queue.offer(new Local(0, 0, 0, RIGHT));
 		while(!queue.isEmpty()) {
@@ -64,6 +81,7 @@ public class JG_1113_teacher {
 			int dir = local.dir; int turn=local.dir;
 			
 			int tempturn; //턴의 횟수가 증가하는지 여부를 체크해서 기록
+			//다음 탐색할 곳에 저장된 턴 수보다 현재 탐색하고 있는 것이 더 작으면 들어가서 갱신해야 한다.
 			//상
 			tempturn = turn+(dir==UP? 0:1);
 			if(0<=r-1&&visited[r-1][c]>=tempturn &&map[r-1][c]==1) { //영역 범위 체크, 이미 저장된 턴의 횟수보다 작을때만 진입
@@ -72,7 +90,7 @@ public class JG_1113_teacher {
 			}
 			//하
 			tempturn = turn+(dir==DOWN? 0:1);
-			if(r+1<M&&visited[r+1][c]>=tempturn &&map[r+1][c]==1) { //영역 범위 체크, 이미 저장된 턴의 횟수보다 작을때만 진입
+			if(r+1<N&&visited[r+1][c]>=tempturn &&map[r+1][c]==1) { //영역 범위 체크, 이미 저장된 턴의 횟수보다 작을때만 진입
 				visited[r+1][c]=tempturn;
 				queue.offer(new Local(r+1, c, tempturn, DOWN));
 			}
@@ -84,9 +102,9 @@ public class JG_1113_teacher {
 			}
 			//우
 			tempturn = turn+(dir==RIGHT? 0:1);
-			if(c+1<N&&visited[r][c+1]>=tempturn &&map[r][c+1]==1) { //영역 범위 체크, 이미 저장된 턴의 횟수보다 작을때만 진입
+			if(c+1<M&&visited[r][c+1]>=tempturn &&map[r][c+1]==1) { //영역 범위 체크, 이미 저장된 턴의 횟수보다 작을때만 진입
 				visited[r][c+1]=tempturn;
-				queue.offer(new Local(r, c+1, tempturn, DOWN));
+				queue.offer(new Local(r, c+1, tempturn, RIGHT));
 			}
 						
 		}//end of while

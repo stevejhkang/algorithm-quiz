@@ -3,7 +3,7 @@ package boj;
 import java.util.Scanner;
 
 public class BOJ_9625 {
-	private static int k;
+	static int k;
 	static int ans_a,ans_b;
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);

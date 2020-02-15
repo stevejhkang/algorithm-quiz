@@ -7,6 +7,7 @@ import java.util.Comparator;
 import java.util.LinkedList;
 import java.util.PriorityQueue;
 import java.util.Queue;
+import java.util.StringTokenizer;
 
 /**
  * 
@@ -24,18 +25,25 @@ public class BOJ_4485_teacher {
 	private static int N;
 	private static int[][] m;
 	//memo[i][j]: [0][0]~[i][j]까지의 최단거리
-	private static int[][] memo= new int[126][126]; 
+	private static int[][] memo;
 
 	public static void main(String[] args) throws NumberFormatException, IOException {
 		BufferedReader bReader = new BufferedReader(new InputStreamReader(System.in));
 		for(int tc =1;;tc++) { //가운데 비면 무한반복
 			N=Integer.parseInt(bReader.readLine()); //동굴크기 2~125
 			if(N==0)break;
-			m = new int[N][N];
+			m=new int[N][N];
+			memo= new int[N][N]; 
+//			for(int i=0;i<N;i++) {
+//				String string = bReader.readLine();
+//				for(int j=0,index=0;j<N;j++,index+=2) {
+//					m[i][j]=string.charAt(index)-'0';
+//				}
+//			}
 			for(int i=0;i<N;i++) {
-				String string = bReader.readLine();
-				for(int j=0,index=0;j<N;j++,index+=2) {
-					m[i][j]=string.charAt(index)-'0';
+				StringTokenizer st = new StringTokenizer(bReader.readLine()," ");
+				for(int j=0;j<N;j++) {
+					m[i][j] = Integer.parseInt(st.nextToken());
 				}
 			}
 			for(int i=0;i<N;i++) {
@@ -50,7 +58,7 @@ public class BOJ_4485_teacher {
 				@Override
 				public int compare(int[] o1, int[] o2) {
 					// TODO Auto-generated method stub
-					return o1[2] -o2[2]; //최단거리의 작은 값을 앞쪽으로(오름차순)(우선)
+					return o1[2] -o2[2]; //뺏긴 돈이 적은 친구부터 앞으로
 				}
 			});
 			
@@ -69,10 +77,13 @@ public class BOJ_4485_teacher {
 				//비용이 개선되었을 때, 가지치기
 				for(int i=0;i<dr.length;i++) {
 					int nr = r+dr[i]; int nc = c+dc[i];
+					//continue보다 그냥 범위, 조건 한꺼번에 체크하는게 편할듯!
 					if(0<=nr&&nr<N&&0<=nc&&nc<N //비용이 더 적게 들면 업데이트해라
-							&&memo[nr][nc]>memo[r][c]+m[nr][nc])
+							&&memo[nr][nc]>memo[r][c]+m[nr][nc]) {
 						memo[nr][nc]=memo[r][c]+m[nr][nc];
-					queue.offer(new int[] {nr,nc,memo[nr][nc]});
+						queue.offer(new int[] 
+								{nr,nc,memo[nr][nc]});
+					}
 				}
 				
 				//큐에서 꺼낸 정점의 모든 인접한 정점을 다시 큐에 넣는다.

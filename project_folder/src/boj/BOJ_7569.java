@@ -11,7 +11,8 @@ import java.util.StringTokenizer;
  * @author steve.jh.kang@gmail.com
  * @time 2020. 2. 12. 오후 7:21:03
  * @category BFS
-* @problem_description
+* @problem_description 모든 토마토가 익을 때까지 최소 며칠이 걸리는 지 계산하는 문제
+* 이미 모든 토마토가 익어있는 상태이면 0, 모두 익지 못하는 상황이면 -1
 * @solving_description 빈공간이면 큐에 넣지말고, 이미 익은 토마토도 큐에 넣으면 안됨.
 * 최소 이동거리(날짜)를 구하기 위해서 visit에 담아둔다.  
 */

@@ -57,7 +57,7 @@ public class BOJ_1600_teacher2 {
 			int kk = arr[2];
 			int moveCnt = arr[3]; //배열 참조보다 지역변수로 저장하면 좀더 빠르다.
 			
-			if(r==H-1&&c==W-1) {//우측하단 도착 //BFS는 각 단계별로 
+			if(r==H-1&&c==W-1) {//BFS는 도착할때가 젤 최소로 도착한 것이므로 그냥 끝내도 된다.
 				if(minMoveCnt>moveCnt) {
 					minMoveCnt=moveCnt;
 				}
@@ -66,8 +66,9 @@ public class BOJ_1600_teacher2 {
 			for(int i=8;i<dr.length;i++) {//상하좌우
 				int nr = r+dr[i];
 				int nc = c+dc[i];
+				//범위 안 벗어나고, 길이고, kk번 남기고 해당 좌표를 방문한 적이 없으면
 				if(0<=nr&&nr<H&&0<=nc&&nc<W
-						&&!visited[nr][nc][kk]&&m[nr][nc]==0) {
+						&&m[nr][nc]==0&&!visited[nr][nc][kk]) {
 					visited[nr][nc][kk]=true;
 					queue.offer(new int[] {nr,nc,kk,moveCnt+1});
 				}
