@@ -1,4 +1,4 @@
-package algo_basic_day1;
+package SWEA;
 
 import java.util.Scanner;
 
