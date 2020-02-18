@@ -2,7 +2,6 @@ package dfs_and_bfs;
 
 import java.util.Arrays;
 
-import sun.tools.jar.resources.jar;
 
 public class nQueens {
 	static int size=4;
@@ -80,14 +79,15 @@ public class nQueens {
 		}
 		return true;
 	}
-}
-class node{
-	int y;
-	int x;
-	public node(int y, int x) {
-		super();
-		this.y = y;
-		this.x = x;
+	static class node{
+		int y;
+		int x;
+		public node(int y, int x) {
+			super();
+			this.y = y;
+			this.x = x;
+		}
+		
 	}
-	
 }
+
