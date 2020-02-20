@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.StringTokenizer;
 
 public class BOJ_2644 {
@@ -11,8 +12,10 @@ public class BOJ_2644 {
 	private static int start;
 	private static int end;
 	private static int m;
-	private static ArrayList[] num;
-	private static int link;
+	private static List[] link;
+	private static boolean[] visit;
+	private static int depth;
+	private static boolean flag;
 
 	public static void main(String[] args) throws NumberFormatException, IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -22,44 +25,41 @@ public class BOJ_2644 {
 		end = Integer.parseInt(st.nextToken());
 		st = new StringTokenizer(br.readLine());
 		m= Integer.parseInt(st.nextToken());
-		num= new ArrayList[n+1];
+		link= new List[n+1];
 		
+		for(int i=1;i<=n;i++) {
+			link[i]= new ArrayList<>(); 
+		}
 		
 		for(int i=0;i<m;i++) {
-			st = new StringTokenizer(br.readLine());
-			int parent = Integer.parseInt(st.nextToken());
-			int child = Integer.parseInt(st.nextToken());
-			if(num[parent]==null) {
-				num[parent]= new ArrayList<Integer>();
-				num[parent].add(child);
-			}
-			else {
-				num[parent].add(child);
-			}
+			st =new StringTokenizer(br.readLine());
+			int from = Integer.parseInt(st.nextToken());
+			int to = Integer.parseInt(st.nextToken());
+			
+			link[from].add(to); link[to].add(from);
 		}
-		link = 0;
-		if(start>end) {
-			int temp =start;
-			start = end;
-			end= temp;
-		}
+		visit = new boolean[n+1];
+		depth=0;
+		flag= false;
 		dfs(start,0);
-		if(link==0) {
+		if(!flag) {
 			System.out.println(-1);
 		}
-		else {
-			System.out.println(link);
-		}
+		
 		
 	}//main
-	static void dfs(int now, int sum) {
+	static void dfs(int now,int depth) {
 		if(now==end) {
-			link=sum;
+			System.out.println(depth);
+			flag= true;
 			return;
 		}
-		for(int i=0;i<num[now].size();i++) {
-			int child = (int) num[now].get(i);
-			dfs(child,sum+1);
+		visit[now]=true;
+		for(int i=0;i<link[now].size();i++) {
+			int next = (int) link[now].get(i);
+			if(!visit[next]) {
+				dfs(next,depth+1);
+			}
 		}
 	}
 }
