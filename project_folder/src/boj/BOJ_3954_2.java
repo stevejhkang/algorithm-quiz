@@ -23,7 +23,6 @@ public class BOJ_3954_2 {
         
         int t = Integer.parseInt(br.readLine());
         StringTokenizer st;
-
         
         for(int tc = 0 ; tc < t ; tc++) {
             st = new StringTokenizer(br.readLine());
@@ -109,7 +108,7 @@ public class BOJ_3954_2 {
                 System.out.println("Loops " +pairs[lastLoop]+" "+lastLoop);
         }
     }
-    static int[] pairs = new int[codeLen];
+    static int[] pairs = new int[4097];
     static void makePair(char[] codes, int codeLen ) {
         Stack<Integer> stack = new Stack<Integer>();
         int closePair ;
