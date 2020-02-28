@@ -56,6 +56,7 @@ public class SWEA_2115 {
 					first_man = Integer.MIN_VALUE;
 					//j부터 j+m-1까지 선택 //
 					dfs(i,j, 0, 0, j);
+					
 //					System.out.println(first_man);
 					second_man = Integer.MIN_VALUE;
 					//그 이후부터 다른 일꾼이 벌꿀칸을 선택한다.
