@@ -34,7 +34,7 @@ public class p1 {
 		StringTokenizer stringTokenizer = new StringTokenizer(bufferedReader.readLine());
 		
 		n = Integer.parseInt(stringTokenizer.nextToken());
-		m = Integer.parseInt(stringTokenizer.nextToken());
+		m = Integer. parseInt(stringTokenizer.nextToken());
 		k = Integer.parseInt(stringTokenizer.nextToken());
 		
 		shape = new int[k][][];
