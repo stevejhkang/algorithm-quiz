@@ -81,7 +81,5 @@ public class Tree {
 		public String toString() {
 			return "[idx=" + idx + ", left=" + (left!=null?left.idx:"") + ", right=" + (right!=null?right.idx:"") + "]";
 		}
-		
-		
 	}
 }
