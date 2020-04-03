@@ -29,53 +29,53 @@ public class p3 {
 		Solution s = new Solution();
 		System.out.println(s.solution(user_id, banned_id));
 	}
-}
-class Solution {
-    private static int n;
-	private static int cnt;
-	private static boolean[] visit;
-	private static Set<String> set;
-	public int solution(String[] user_id, String[] banned_id) {
-        cnt=0;
-        visit = new boolean[n];
-        set = new HashSet<String>(); 
-        dfs(user_id,banned_id,0);
-        cnt=set.size();
-        return cnt;
-    }
-	static void dfs(String[] user_id,String[] banned_id, int r) {
-		int usize= user_id.length;
-		int bsize= banned_id.length;
-		if(r>=bsize) { //사이즈가 같아지면 뽑힌 user_id의 인덱스를 Set<String>에 넣어 중복을 없애준다. 
-			StringBuilder stringBuilder = new StringBuilder();
-			for(int i=0;i<user_id.length;i++) {
-				if(visit[i]) {
-					stringBuilder.append(i);
+	static class Solution {
+	    private static int n;
+		private static int cnt;
+		private static boolean[] visit;
+		private static Set<String> set;
+		public int solution(String[] user_id, String[] banned_id) {
+	        cnt=0;
+	        visit = new boolean[n];
+	        set = new HashSet<String>(); 
+	        dfs(user_id,banned_id,0);
+	        cnt=set.size();
+	        return cnt;
+	    }
+		static void dfs(String[] user_id,String[] banned_id, int r) {
+			int usize= user_id.length;
+			int bsize= banned_id.length;
+			if(r>=bsize) { //사이즈가 같아지면 뽑힌 user_id의 인덱스를 Set<String>에 넣어 중복을 없애준다. 
+				StringBuilder stringBuilder = new StringBuilder();
+				for(int i=0;i<user_id.length;i++) {
+					if(visit[i]) {
+						stringBuilder.append(i);
+					}
+				}
+				set.add(stringBuilder.toString());
+				return;
+			}
+			for(int i=0;i<usize;i++) { //이렇게 해줘야 전부 선택이 된다.... 처음부터 개수를 뽑아버리면 안됐었어;;;
+				if(banned_id[r].length()!=user_id[i].length() || visit[i]) continue; //길이가 다르거나 같아서 선택이 되어 있으면
+				
+				boolean toggle = true;
+				for(int j=0;j<user_id[i].length();j++) { //i번째 userid와 r번째 bannedid를 비교한다.
+					if(banned_id[r].charAt(j)=='*') { //*이면 그냥 넘어간다.
+						continue;
+					}
+					if(user_id[i].charAt(j)!=banned_id[r].charAt(j)) { //다르면 다음 user id로 넘어간다.
+						toggle = false;
+						break;
+					}
+				}
+				if(toggle) {
+					visit[i] = true; //방문처리 해주고 길이를 늘려준다.
+					dfs(user_id,banned_id,r+1);
+					visit[i] = false;
 				}
 			}
-			set.add(stringBuilder.toString());
-			return;
 		}
-		for(int i=0;i<usize;i++) { //이렇게 해줘야 전부 선택이 된다.... 처음부터 개수를 뽑아버리면 안됐었어;;;
-			if(banned_id[r].length()!=user_id[i].length() || visit[i]) continue; //길이가 다르거나 같아서 선택이 되어 있으면
-			
-			boolean toggle = true;
-			for(int j=0;j<user_id[i].length();j++) { //i번째 userid와 r번째 bannedid를 비교한다.
-				if(banned_id[r].charAt(j)=='*') { //*이면 그냥 넘어간다.
-					continue;
-				}
-				if(user_id[i].charAt(j)!=banned_id[r].charAt(j)) { //다르면 다음 user id로 넘어간다.
-					toggle = false;
-					break;
-				}
-			}
-			if(toggle) {
-				visit[i] = true; //방문처리 해주고 길이를 늘려준다.
-				dfs(user_id,banned_id,r+1);
-				visit[i] = false;
-			}
-		}
+	  
+	 
 	}
-  
- 
 }
