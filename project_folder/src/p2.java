@@ -1,106 +1,66 @@
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.StringTokenizer;
 
 /**
  * @author steve.jh.kang@gmail.com
- * @time 2020. 4. 3. 오전 12:56:50
+ * @time 2020. 4. 5. 오전 10:18:41
  * @category 
 * @problem_description 
+* 두 응시자가 제출한 답안지에 대해서, 부정행위 가능성 지수 계산
+* 의심문항 = 같은 선택지를 골랐으나 오답인 문항
+* 부정행위 가능성 지수 = 총 의심문항의 수 + (가장 긴 연속된 의심문항의 수)^2  : 가장 긴 연속된이라는게 연속으로 몇번 같았는지를 의미하는 것 같음
+* 응시자수는 200명 이하 문항수는 100개 이하
+* 이중포문 돌려도 4백만이라서 완탐가능
 * @solving_description 
-* 일일이 검사해서 있으면 
 */
-
-//한번 효율성 있게 짜보자
 
 public class p2 {
 	public static void main(String[] args) {
-
 		Solution s = new Solution();
-		System.out.println(Arrays.toString(s.solution("{{2},{2,1},{2,1,3},{2,1,3,4}}")));
+		
+//		String answer_sheet="4132315142";
+//		String[] sheets= {"3241523133","4121314445","3243523133","4433325251","2412313253"};
+//		
+//		String answer_sheet="53241";
+//		String[] sheets= {"53241", "42133", "53241", "14354"};
+		
+		String answer_sheet="24551";
+		String[] sheets= {"24553", "24553", "24553", "24553"};
+		
+		System.out.println(s.solution( answer_sheet, sheets));
 	}
 	static class Solution {
-		public int[] solution(String s) {
-//			int[] answer = {};
-			String ans = s.replaceAll("\\{|\\}", "");
-//			System.out.println(ans);
-			StringTokenizer stringTokenizer =new StringTokenizer(ans,",");
-			
-			ArrayList<num> al =new ArrayList<>();
-			while(stringTokenizer.hasMoreElements()) {
-				int a= Integer.parseInt(stringTokenizer.nextToken());
-				num now = new num(a, 1);
-				boolean is=false;
-				for(num temp: al) {//일일이 리스트에 있는지 검사
-					if(temp.equals(now)) { 
-						temp.val++;
-						is=true;
-						break;
-					}
-				}
-				if(!is) { //없으면 새로 추가
-					al.add(now);
-				}
-			}
-			Collections.sort(al); //빈도수(val) 대로 정렬시킨다.
-//			System.out.println(al);
-			int[] answer =new int[al.size()];
-			int idx=0;
-			for(num temp: al) {
-				answer[idx++]=temp.idx;
-			}
-//			for(int i=0;i<al.size();i++) {
-//				System.out.print(answer[i]+" ");
-//			}
-			return answer;
-		}
+	    public int solution(String answer_sheet, String[] sheets) {
+	        int answer = -1;
+	        
+	        int max_conti=0;
+	        int max_point = 0;
+	        int max_sum=0;
+	        int conti=0;
+	        for(int i=0;i<sheets.length;i++) {
+	        	for(int j=0;j<sheets.length;j++) {
+	        		if(i==j) continue;
+	        		int sum=0;
+	        		for(int index=0;index<answer_sheet.length();index++) {
+	        			//서로 답이 같고 오답인 문항
+	        			if(sheets[i].charAt(index)==sheets[j].charAt(index)&&
+	        					sheets[i].charAt(index)!=answer_sheet.charAt(index)) {
+	        				sum++;
+	        				conti++;
+	        			}
+	        			else { //다르면 0으로 만들어준다.
+	        				max_conti=Math.max(conti, max_conti);	
+	        				conti=0;
+	        			}
+	        		}// for index 전부 끝났을 때 제일 그중에서 제일 연속된 의심문항의 수를 갱신한다./
+	        		max_sum=Math.max(max_sum,sum);
+	        		max_conti=Math.max(conti, max_conti);
+	        		int point = max_sum+max_conti*max_conti;
+	        		max_point = Math.max(point, max_point);
+	        	}
+	        	
+	        }
+	        
+	        return max_point;
+	    }
 	}
-
-	static class num implements Comparable<num> {
-		int idx;
-		int val;
-
-		public num(int idx, int val) {
-			super();
-			this.idx = idx;
-			this.val = val;
-		}
-
-		@Override
-		public int hashCode() {
-			return idx;
-		}
-
-		@Override
-		public boolean equals(Object obj) {
-			if (this == obj)
-				return true;
-			if (obj == null)
-				return false;
-			if (getClass() != obj.getClass())
-				return false;
-			num other = (num) obj;
-			if (idx != other.idx)
-				return false;
-			return true;
-		}
-
-		@Override
-		public int compareTo(num o) {
-			if (this.val > o.val)
-				return -1;
-			else
-				return 1;
-		}
-
-		@Override
-		public String toString() {
-			return "num [idx=" + idx + "]";
-		}
-
-	}
-	
 }
+ 
