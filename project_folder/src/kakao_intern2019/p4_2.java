@@ -42,8 +42,8 @@ public class p4_2 {
 				answer[idx++]=next; //정답을 넣어주고
 				
 				//next의 부모를 다음 가능한 곳으로 넣어주어야한다.
-				parent.put(next, ufind(next+1));
-				parent.put(a, parent.get(next));
+				parent.put(next, ufind(next+1)); //부모가 비어있으면 자기자신 안 비어있으면 빈방을 가리킨다.
+				parent.put(a, parent.get(next)); //이미 찬 방이 또 들어왔을 때 빈방을 가리키도록 만들어준다.
 				
 			}
 			
