@@ -22,66 +22,66 @@ public class 이분탐색_예산 {
 		int M = 485;
 		System.out.println(s.solution(budgets, M));
 	}
-}
-class Solution {
-	static int answer = Integer.MIN_VALUE;
-	static int bud;
-	static boolean[] visit;
-	private int min;
+	static class Solution {
+		static int answer = Integer.MIN_VALUE;
+		static int bud;
+		static boolean[] visit;
+		private int min;
 
-	public int solution(int[] budgets, int M) {
+		public int solution(int[] budgets, int M) {
 
-		long sum = 0;
-		int max = Integer.MIN_VALUE;
-		min = Integer.MAX_VALUE;
-		bud = M;
+			long sum = 0;
+			int max = Integer.MIN_VALUE;
+			min = Integer.MAX_VALUE;
+			bud = M;
 
-		for (int i = 0; i < budgets.length; i++) {
-			sum += budgets[i];
-			max = Math.max(max, budgets[i]);
-			min = Math.min(min, budgets[i]);
-		}
-
-		visit = new boolean[max];
-		if (M >= sum) { // 예산 분배 가능하면 max값 출력
-			return max;
-		}
-
-		else {
-			int mid = (0 + max) / 2;
-			binarysearch(budgets, 0, mid, max);
-			if (answer == Integer.MIN_VALUE) {
-				return 0;
-			} else {
-				return answer;
-			}
-
-		}
-	}
-
-	public void binarysearch(int[] budgets, int start, int upper_limit, int end) {
-		long sum = 0;
-		for (int i = 0; i < budgets.length; i++) {
-			if (upper_limit >= budgets[i]) {
+			for (int i = 0; i < budgets.length; i++) {
 				sum += budgets[i];
-			} else {
-				sum += upper_limit;
-			}
-		}
-		if (sum > bud) { // 예산을 넘으면 줄인다.
-			if (!visit[upper_limit]) {
-				visit[upper_limit] = true;
-				int mid = (start + upper_limit) / 2;
-				binarysearch(budgets, start, mid, upper_limit);
-			}
-		} else { // 예산을 안벗어나면 최신화시키고 더 높게 측정해본다.
-			if (!visit[upper_limit]) {
-				visit[upper_limit] = true;
-				answer = Math.max(answer, upper_limit);
-				int mid = (upper_limit + end) / 2;
-				binarysearch(budgets, upper_limit, mid, end);
+				max = Math.max(max, budgets[i]);
+				min = Math.min(min, budgets[i]);
 			}
 
+			visit = new boolean[max];
+			if (M >= sum) { // 예산 분배 가능하면 max값 출력
+				return max;
+			}
+
+			else {
+				int mid = (0 + max) / 2;
+				binarysearch(budgets, 0, mid, max);
+				if (answer == Integer.MIN_VALUE) {
+					return 0;
+				} else {
+					return answer;
+				}
+
+			}
+		}
+
+		public void binarysearch(int[] budgets, int start, int upper_limit, int end) {
+			long sum = 0;
+			for (int i = 0; i < budgets.length; i++) {
+				if (upper_limit >= budgets[i]) {
+					sum += budgets[i];
+				} else {
+					sum += upper_limit;
+				}
+			}
+			if (sum > bud) { // 예산을 넘으면 줄인다.
+				if (!visit[upper_limit]) {
+					visit[upper_limit] = true;
+					int mid = (start + upper_limit) / 2;
+					binarysearch(budgets, start, mid, upper_limit);
+				}
+			} else { // 예산을 안벗어나면 최신화시키고 더 높게 측정해본다.
+				if (!visit[upper_limit]) {
+					visit[upper_limit] = true;
+					answer = Math.max(answer, upper_limit);
+					int mid = (upper_limit + end) / 2;
+					binarysearch(budgets, upper_limit, mid, end);
+				}
+
+			}
 		}
 	}
 }
