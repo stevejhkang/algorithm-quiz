@@ -3,63 +3,83 @@ package programmers;
 import java.util.Arrays;
 import java.util.Comparator;
 
+/**
+ * @author steve.jh.kang@gmail.com
+ * @time 2020. 4. 29. 오후 9:42:24
+ * @category 
+* @problem_description 
+* @solving_description 그냥 두 수를 문자열로 합쳤을 때 어떤 값이 더크냐를 확인하면 된다.
+* 34 3 30
+* 
+* 1. 343 334
+* 2. 330 303
+* 3. 334 303
+*/
+
 public class 정렬_가장큰수 {
 	public static void main(String[] args) {
 		Solution s = new Solution();
 //		int[] arr = {6,10,2};
 		int[] arr = {3, 30, 34, 5, 9};
-		s.solution(arr);
+		System.out.println(s.solution(arr));
+		
 	}
 	static class Solution {
 	    public String solution(int[] numbers) {
 	        String answer = "";
 	        
-	        String[] arr= new String [numbers.length];
+	        Integer[] array = new Integer[numbers.length];
 	        for(int i=0;i<numbers.length;i++) {
-	        	arr[i] = (new Integer(numbers[i])).toString();
+	        	array[i] = numbers[i];
 	        }
-	        //1000이하니까 한자리씩 비교하자
-	        Arrays.sort(arr,new Comparator<String>() {
+	        Arrays.sort(array, new Comparator<Integer>() {
 
 				@Override
-				public int compare(String o1, String o2) {
+				public int compare(Integer o1, Integer o2) {
 					// TODO Auto-generated method stub
-					if(o1.length()==o2.length()) {//자리수 같으면 숫자가 큰거
-						for(int i=0;i<o2.length();i++) {
-							if(o1.charAt(i)==o2.charAt(i)) continue;
-							return (o1.substring(i, i+1).compareTo(o2.substring(i,i+1)))*-1;
-						}
-					}
-					else { //다르면 앞자리부터 비교
-						int len = Math.min(o1.length(), o2.length());
-						int i=0;
-						for(;i<len;i++) {
-							if(o1.charAt(i)==o2.charAt(i)) continue;
-							return (o1.substring(i, i+1).compareTo(o2.substring(i,i+1)))*-1;
-						}
-						if(len==i) { //다음 원소보다 빠르면
-							
-							if(o1.length()<o2.length()) {
-								for(;i<o2.length();i++) {
-									if(o1.charAt(len-1)==o2.charAt(i)) continue;
-									return (o2.substring(len-1, len).compareTo(o1.substring(i,i+1)))*-1;
-								}
-							}
-							else {
-								for(;i<o1.length();i++) {
-									if(o2.charAt(len-1)==o1.charAt(i)) continue;
-									return (o1.substring(len-1, len).compareTo(o2.substring(i,i+1)))*-1;
-								}
-							}
-						}
-					}
-					return 0;
+					String tmp1 = o1.toString();
+					String tmp2 = o2.toString();
+					return (tmp1+tmp2).compareTo(tmp2+tmp1) *-1;
 				}
 			});
-	        
-	        System.out.println(Arrays.toString(arr));
-	        
+	        StringBuilder stringBuilder = new StringBuilder();
+	        for(int i=0;i<array.length;i++) {
+	        	stringBuilder.append(array[i]);
+	        }
+	        answer = stringBuilder.toString();
+	        if(answer.substring(0, 1).equals("0")) {
+	        	answer="0";
+	        }
 	        return answer;
 	    }
 	}
 }
+//class Solution {
+//    public String solution(int[] numbers) {
+//        String answer = "";
+//        
+//        Integer[] array = new Integer[numbers.length];
+//        for(int i=0;i<numbers.length;i++) {
+//        	array[i] = numbers[i];
+//        }
+//        Arrays.sort(array, new Comparator<Integer>() {
+//
+//			@Override
+//			public int compare(Integer o1, Integer o2) {
+//				// TODO Auto-generated method stub
+//				String tmp1 = o1.toString();
+//				String tmp2 = o2.toString();
+//				return (tmp1+tmp2).compareTo(tmp2+tmp1) *-1;
+//			}
+//		});
+//        StringBuilder stringBuilder = new StringBuilder();
+//        for(int i=0;i<array.length;i++) {
+//        	stringBuilder.append(array[i]);
+//        }
+//        answer = stringBuilder.toString();
+//        if(answer.substring(0, 1).equals("0")) {
+//        	answer="0";
+//        }
+//        return answer;
+//    }
+//}
