@@ -193,14 +193,14 @@ public class BOJ_17825 {
 			//이동시킨다.
 			index[next]++;
 		}
-		if(result==161) {
-			for(int i=0;i<4;i++) {
-				for(int j=0;j<order[i].size();j++) {
-					System.out.print(order[i].get(j)+" ");
-				}
-				System.out.println();
-			}
-		}
+//		if(result==161) {
+//			for(int i=0;i<4;i++) {
+//				for(int j=0;j<order[i].size();j++) {
+//					System.out.print(order[i].get(j)+" ");
+//				}
+//				System.out.println();
+//			}
+//		}
 		return result;
 	}
 }
