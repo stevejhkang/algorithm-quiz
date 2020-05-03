@@ -27,15 +27,15 @@ public class SWEA_5653_3 {
 			super();
 			this.i = i;
 			this.j = j;
-			this.x = x;
-			this.time = time;
+			this.x = x; //생명력
+			this.time = time; //시간
 		}
 
 		@Override
 		public int compareTo(Cell o) {
 			// TODO Auto-generated method stub
 			if(time!=o.time) {
-				return Integer.compare(time, o.time); //오름차순이면 자기꺼부터 -> 활성화가 짧은 순으로
+				return Integer.compare(time, o.time); //오름차순이면 자기꺼부터 -> 활성화되기까지 남은 시간이 짧은 순으로
 			}
 			else {
 				return Integer.compare(x, o.x)*-1; //같으면 생명력이 큰거로
@@ -67,7 +67,7 @@ public class SWEA_5653_3 {
 			for(int i=350;i<n+350;i++) { //배열의 중간부터 시작 (350,350)
 				stringTokenizer = new StringTokenizer(bufferedReader.readLine());
 				for(int j=350;j<m+350;j++) {
-					int x = Integer.parseInt(stringTokenizer.nextToken());
+					int x = Integer.parseInt(stringTokenizer.nextToken()); //생명력
 					if(x!=0) {
 						visit[i][j] = true; //방문처리하고 
 						pq.add(new Cell(i,j,x,x+1)); //번식이 시작되는 시간은 활성화 후 +1 시간때니까.
