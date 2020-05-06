@@ -22,124 +22,115 @@ import javax.management.loading.MLet;
  */
 
 public class 카카오블라인드2018_프렌지4블록 {
-	static int[] dy = { 1, 1, 0 };
-	static int[] dx = { 0, 1, 1 };
+
 
 	public static void main(String[] args) {
-//		int m = 4; //높이
-//		int n = 5; //넓이
-//		String[] board = {"CCBDE", "AAADE", "AAABF", "CCBBF"};
+		int m = 4; //높이
+		int n = 5; //넓이
+		String[] board = {"CCBDE", "AAADE", "AAABF", "CCBBF"};
 
-		int m = 6;
-		int n = 6;
-		String[] board = { "TTTANT", "RRFACC", "RRRFCC", "TRRRAA", "TTMMMF", "TMMTTJ" };
+//		int m = 6;
+//		int n = 6;
+//		String[] board = { "TTTANT", "RRFACC", "RRRFCC", "TRRRAA", "TTMMMF", "TMMTTJ" };
 
 		System.out.println(new Solution().solution(m, n, board));
 	}
 
-	static class Solution {
-		static int static_m;
-		static int static_n;
-		static String[] boards ;
-		private static int[][] visit;
+}
+class Solution {
+
+	private static int[][] visit;
+	private static char[][] map;
+	static int[] dy = { 1, 1, 0 };
+	static int[] dx = { 0, 1, 1 };
+	public int solution(int m, int n, String[] board) {
+		int answer = 0;
+
+		boolean is_change = false;
 		
-		public int solution(int m, int n, String[] board) {
-			int answer = 0;
-			static_m = m;
-			static_n = n;
-			System.out.println(static_m);
-			System.out.println(static_n);
-			boards = board.clone();
-			boolean is_change = false;
-			
-			visit = new int[m][n];
-			
-			char[][] map = new char[m+1][n+1];
-			for(int i=0;i<=m;i++) {
-				Arrays.fill(map[i],' ');
+		map = new char[m+1][n+1];
+		//아래로 내려주기 위해 0번째 인덱스를 만들어 준다.
+		//빈칸으로 채운다.
+		for(int i=0;i<=m;i++) {
+			Arrays.fill(map[i],' ');
+		}
+		//그리고 map에 채워준다.
+		for (int i = 0; i < m; i++) {
+			for (int j = 0; j < n; j++) {
+				char c = board[i].charAt(j);
+				map[i+1][j+1] =c; //1,1부터 시작
 			}
-//			for (int i = 0; i < m; i++) {
-//				for (int j = 0; j < n; j++) {
-//					char c = board[i].charAt(j);
-//					map[i+1][j+1] =c;
-//				}
+		}
+//		for (int i = 1; i <= m; i++) {
+//			for (int j = 1; j <= n; j++) {
+//		
+//				System.out.print(map[i][j]+" ");
 //			}
-//			for (int i = 1; i <= m; i++) {
-//				for (int j = 1; j <= n; j++) {
-//			
-//					System.out.print(map[i][j]+" ");
-//				}
-//				System.out.println();
-//			}
-			int remove_cnt=0;
-			while (true) {
-				visit = new int[m][n];
-				for (int i = 0; i < m; i++) {
-					for (int j = 0; j < n; j++) {
-						char c = board[i].charAt(j);
-						map[i+1][j+1] =c;
-						boolean same = true;
+//			System.out.println();
+//		}
+		//지운 개수를 저장하는 변수
+		int remove_cnt=0;
+		//더이상 셋트가 되어 사라지는게 없을때까지 무한반복
+		while (true) {
+			is_change=false;
+			visit = new int[m+1][n+1];
+			for (int i = 1; i <= m; i++) {
+				for (int j = 1; j <= n; j++) {
+					char c = map[i][j];
+					
+					//빈칸이 아닌 알파벳은 전부 오른쪽, 아래, 오른쪽아래 대각선이 같은지 확인한다.
+					map[i][j] =c;
+					if(c==' ') continue;
+
+					int move_cnt = 1;
+					
+					for(int dir=0;dir<3;dir++) {
+						int ny = i+dy[dir];
+						int nx = j+dx[dir];
 						
-						int move_cnt = move(i,j,0,0,c);
-						
-						if(move_cnt==3) {
-							visit[i][j] = 1;
-							is_change=true;
+						//범위
+						if(ny>m||nx>n) break;
+						if(c==map[ny][nx])
+							move_cnt++;
+					}
+					if(move_cnt==4) { //다 같으면 지워야할것으로 표시한다.
+						visit[i][j] = 1;
+						for(int dir=0;dir<3;dir++) {
+							int ny = i+dy[dir];
+							int nx = j+dx[dir];
+							
+							visit[ny][nx]=1;
 						}
-					} // for j
-				} // for i
-				if (!is_change) {
-					break;
-				}
-				else { //배열 전체 확인하면서 쭉 내려준다. 1이면 col을 1씩 내려준다.
-					for(int i=0;i<m;i++) {
-						for(int j =0;j<n;j++) {
-							if(visit[i][j]==1) { //col별로 row 1씩 내려줘야한다.
-								remove_cnt++;
-								for(int k = i;k>=1;k--) {
-									map[k][j] = map[k-1][j];
-								}
+						is_change=true;
+					}
+					
+				} // for j
+			} // for i
+			if (!is_change) {
+				break;
+			}
+			else { //바꿀게 있다면 배열 전체 확인하면서 쭉 내려준다. 1이면 col을 1씩 내려준다.
+				for(int i=1;i<=m;i++) {
+					for(int j =1;j<=n;j++) {
+						if(visit[i][j]==1) { //col별로 row 1씩 내려줘야한다.
+							remove_cnt++;
+							for(int k = i;k>=1;k--) {
+								map[k][j] = map[k-1][j];
 							}
 						}
 					}
 				}
-				System.out.println();
-				for (int i = 1; i <= m; i++) {
-					for (int j = 1; j <= n; j++) {
-				
-						System.out.print(map[i][j]+" ");
-					}
-					System.out.println();
-				}
-				System.out.println();
-			}//while
-			answer= remove_cnt;
-			return answer;
-		}
-		static int move(int y, int x, int same_cnt, int dir,char c) {
-			if(dir==3) {
-				return same_cnt;
 			}
-			//다음 것을 받아오고
-			int ni = y + dy[dir];
-			int nj = x + dx[dir];
-
-			// 범위 체크
-			if (ni >=static_m || nj >= static_n)
-				return 0;
-
-			int next_c = ((String) boards[ni]).charAt(nj);
-			int cnt=0;
-			if(next_c==c) {
-				cnt = move(y, x, same_cnt+1, dir+1, c);
-				if(cnt==3) {
-					visit[ni][nj]= 1;
-				}
-				return cnt;
-			}
-			else 
-				return 0;
-		}
+//			System.out.println();
+//			for (int i = 1; i <= m; i++) {
+//				for (int j = 1; j <= n; j++) {
+//					System.out.print(map[i][j]+" ");
+//				}
+//				System.out.println();
+//			}
+//			System.out.println();
+		}//while
+		answer= remove_cnt;
+		return answer;
 	}
-
 }
