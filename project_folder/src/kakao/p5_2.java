@@ -1,4 +1,4 @@
-package kakao_intern2019;
+package kakao;
 
 /**
  * @author steve.jh.kang@gmail.com

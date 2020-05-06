@@ -6,36 +6,47 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.StringTokenizer;
 
+/**
+ * @author steve.jh.kang@gmail.com
+ * @time 2020. 4. 3. 오전 12:56:50
+ * @category 
+* @problem_description 
+* @solving_description 
+* 일일이 검사해서 있으면 
+*/
+
+//한번 효율성 있게 짜보자
+
 public class p2 {
 	public static void main(String[] args) {
 
 		Solution s = new Solution();
-		System.out.println(s.solution("{{2},{2,1},{2,1,3},{2,1,3,4}}").toString());
+		System.out.println(Arrays.toString(s.solution("{{2},{2,1},{2,1,3},{2,1,3,4}}")));
 	}
 	static class Solution {
 		public int[] solution(String s) {
 //			int[] answer = {};
 			String ans = s.replaceAll("\\{|\\}", "");
 //			System.out.println(ans);
-			
 			StringTokenizer stringTokenizer =new StringTokenizer(ans,",");
+			
 			ArrayList<num> al =new ArrayList<>();
 			while(stringTokenizer.hasMoreElements()) {
 				int a= Integer.parseInt(stringTokenizer.nextToken());
 				num now = new num(a, 1);
 				boolean is=false;
-				for(num temp: al) {
-					if(temp.equals(now)) {
+				for(num temp: al) {//일일이 리스트에 있는지 검사
+					if(temp.equals(now)) { 
 						temp.val++;
 						is=true;
 						break;
 					}
 				}
-				if(!is) {
+				if(!is) { //없으면 새로 추가
 					al.add(now);
 				}
 			}
-			Collections.sort(al);
+			Collections.sort(al); //빈도수(val) 대로 정렬시킨다.
 //			System.out.println(al);
 			int[] answer =new int[al.size()];
 			int idx=0;
