@@ -33,7 +33,7 @@ package kakao;
 * 
 */
 
-public class 카카오블라인드2018_N진수게임 {
+public class 블라인드18_N진수게임 {
 	public static void main(String[] args) {
 		int n = 2;
 		int t = 4;

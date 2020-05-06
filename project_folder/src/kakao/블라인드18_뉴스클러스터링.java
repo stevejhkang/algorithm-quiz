@@ -34,7 +34,7 @@ import java.util.regex.Pattern;
 *  1. map iter를 하는 방법을 알아놓자
 *  2. 기호를 버리는 방법 = 문자로만 이루어져있는지 확인
 */
-public class 카카오블라인드2018_뉴스클러스터링 {
+public class 블라인드18_뉴스클러스터링 {
 	public static void main(String[] args) {
 //		System.out.println((double)16384/65536);
 		

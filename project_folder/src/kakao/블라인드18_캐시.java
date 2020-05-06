@@ -34,7 +34,7 @@ import java.util.Queue;
 * 앞뒤로 지워주는 거니까 링크드 리스트를 사용하면 좋을 것이라는 점.
 */
 
-public class 카카오블라인드2018_캐시 {
+public class 블라인드18_캐시 {
 	public static void main(String[] args) {
 		int cacheSize= 5;
 //		String[] cities = {"Jeju", "Pangyo", "Seoul", "NewYork", "LA", "Jeju", "Pangyo", "Seoul", "NewYork", "LA"};

@@ -45,7 +45,7 @@ import java.util.Arrays;
 * 
 */
 
-public class 카카오블라인드2018_파일명정렬 {
+public class 블라인드18_파일명정렬 {
 	public static void main(String[] args) {
 //		String[] files = {"img9d99.png", "img10d10.png", "img013.png", "img014.png","img000111.JPG", "IMG0011.GIF" };
 		String[] files = {"img09999999999", "img9998999", "img013", "img014","img00011.", "IMG0011111." };
