@@ -5,7 +5,8 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Set;
 
-public class p4 {
+
+public class 겨울인턴19_4_호텔방배정_시간초과 {
 	public static void main(String[] args) {
 		Solution s = new Solution();
 		long k =10;

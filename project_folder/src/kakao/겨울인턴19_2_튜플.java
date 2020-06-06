@@ -9,7 +9,7 @@ import java.util.StringTokenizer;
  * @author steve.jh.kang@gmail.com
  * @time 2020. 5. 8. 오전 11:27:28
  * @category 문자열 편집, 자료구조 활용, 정규표현식
-* @level 2
+* @level 3
 * @problem_description 
 * 1. 튜플은 중복된 원소가 있을 수 있다.
 * 2. 원소에 정해진 순서가 있으며, 순서가 다르면 서로다른 튜플
@@ -22,14 +22,17 @@ import java.util.StringTokenizer;
 * s의 원소는 10만이하
 * @solving_description 
 * 문자열 편집: 앞뒤를 자르고
-* },{를 토크나이저로 하려고 했으나 안되서 replace를 통해서 하나의 문자로 통합했다.
+* },{를 토크나이저로 하려고 했으나 안되서 replace를 통해서 하나의 문자로 통합했다. 리플레이스와 토크나이저를 적절히 사용할 필요
 * 항상 이렇게 공통으로 처리할 것을 하나로 만들어줘야하는 경우가 많은 것 같다.
 * 
+* 숫자 배열의 길이별로 소트하는 방법을 배움
+* 
 * 그리고 중복을 확인하기 위해서 set을 사용해서 이미 추가가 되었을 경우 뒤를 탐색하게 하는 방식으로 처리를 한다.
+* 정답은 그냥 배열에 따로 저장한다.
 * 
 */
 
-public class 겨울인턴19_튜플 {
+public class 겨울인턴19_2_튜플 {
 	public static void main(String[] args) {
 //		String s = "{{2},{2,1},{2,1,3},{2,1,3,4}}";
 		String s="{{1,2,3},{2,1},{1,2,4,3},{2}}";
@@ -42,8 +45,8 @@ public class 겨울인턴19_튜플 {
 	        int[] answer = {};
 	        
 	        //문자열을 ,로 자른다
-	        s = s.substring(2,s.length()-2).replace("},{","-"); //
-	        String[] arr  = s.split("-");
+	        s = s.substring(2,s.length()-2).replace("},{","-"); //앞뒤만 {{, }}이고 나머지는 },{이므로 중간만 -로 바꿀 수 있다.
+	        String[] arr  = s.split("-"); 
 //	        StringTokenizer stringTokenizer = new StringTokenizer(s,"\\},\\{");
 	        s_arr= new String[arr.length][];
 	        int index =0;
@@ -52,12 +55,12 @@ public class 겨울인턴19_튜플 {
 //	        	Arrays.sort(s_arr[index]);
 	        	index++;
 	        }
-	        Arrays.sort(s_arr, new Comparator<String[]>() {
+	        
+	        Arrays.sort(s_arr, new Comparator<String[]>() { //문자열의 길이별로 정렬을 한다.
 
 				@Override
 				public int compare(String[] o1, String[] o2) {
 					// TODO Auto-generated method stub
-					
 					
 					return Integer.compare(o1.length, o2.length);
 				}
@@ -68,12 +71,12 @@ public class 겨울인턴19_튜플 {
 	        
 	        HashSet<Integer> set = new HashSet<>();
 	        for(int i=0;i<arr_len;i++) {
-	        	for(int j=0;j<s_arr[i].length;j++) {
+	        	for(int j=0;j<s_arr[i].length;j++) { //매번 안담긴게 하나씩 존재 한다.
 	        		int num = Integer.parseInt(s_arr[i][j]);
 //	        		System.out.println(num);
-	        		if(!set.contains(num)) {
+	        		if(!set.contains(num)) {  //그것을 찾아서 넣어준다.
 	        			set.add(num);
-	        			answer[i]= num;
+	        			answer[i]= num; 
 	        			break;
 	        		}
 	        	}

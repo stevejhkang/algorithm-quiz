@@ -11,13 +11,14 @@ import java.util.StringTokenizer;
  * @time 2020. 4. 3. 오전 12:56:50
  * @category 
 * @problem_description 
+* 어짜피 처음 나온 것은 앞으로도 계속 나오니까 해당 숫자의 빈도수가 높은게 제일 앞에 오는게 된다.
 * @solving_description 
 * 일일이 검사해서 있으면 
 */
 
 //한번 효율성 있게 짜보자
 
-public class p2 {
+public class 겨울인턴19_2_튜플2 {
 	public static void main(String[] args) {
 
 		Solution s = new Solution();
@@ -35,6 +36,7 @@ public class p2 {
 				int a= Integer.parseInt(stringTokenizer.nextToken());
 				num now = new num(a, 1);
 				boolean is=false;
+				
 				for(num temp: al) {//일일이 리스트에 있는지 검사
 					if(temp.equals(now)) { 
 						temp.val++;
@@ -47,9 +49,10 @@ public class p2 {
 				}
 			}
 			Collections.sort(al); //빈도수(val) 대로 정렬시킨다.
-//			System.out.println(al);
+			
 			int[] answer =new int[al.size()];
 			int idx=0;
+			//순서대로 정답을 넣는다.
 			for(num temp: al) {
 				answer[idx++]=temp.idx;
 			}
@@ -69,10 +72,21 @@ public class p2 {
 			this.idx = idx;
 			this.val = val;
 		}
+		
+		@Override
+		public int compareTo(num o) {
+			if (this.val > o.val)
+				return -1;
+			else
+				return 1;
+		}
 
 		@Override
 		public int hashCode() {
-			return idx;
+			final int prime = 31;
+			int result = 1;
+			result = prime * result + idx;
+			return result;
 		}
 
 		@Override
@@ -87,14 +101,6 @@ public class p2 {
 			if (idx != other.idx)
 				return false;
 			return true;
-		}
-
-		@Override
-		public int compareTo(num o) {
-			if (this.val > o.val)
-				return -1;
-			else
-				return 1;
 		}
 
 		@Override

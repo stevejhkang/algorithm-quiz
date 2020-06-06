@@ -29,6 +29,7 @@ public class SWEA_1206_View {
 			
 			map = new int[256][len];
 			height = new int[len];
+			String str;
 			
 			StringTokenizer stringTokenizer =new StringTokenizer(bufferedReader.readLine());
 			for(int i=0;i<len;i++) {

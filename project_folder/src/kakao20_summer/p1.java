@@ -1,5 +1,23 @@
 package kakao20_summer;
 
+/**
+ * @author steve.jh.kang@gmail.com
+ * @time 2020. 5. 30. 오후 4:58:50
+ * @category 
+* @level 3
+* @problem_description 
+* 휴대폰에서 번호를 누르는데 가운데 라인 번호를 왼손과 오른손 중에서 현재 누르려는 번호와 더 가까운 손가락이 누르는 규칙이 있는 문제로
+* 번호 인풋이 주어졌을 때 왼손 오른손 누른 순서를 출력
+* 
+* 해결방식
+* 해당 번호를 키로 위치y,x를 map에 저장한다. 
+* 누른 번호가 왼쪽 라인에 있으면 L를 추가하고 현재 위치를 해당 위치로 바꿔주고
+* 오른쪽 라인에 있으면 R를 추가하고 현재 오른 손가락 위치를 바꿔주고
+* 가운데 라인이면 현재 왼쪽, 오른쪽 손가락 중에 가까운 것을 비교하고 가까운 것의 알파벳을 추가하고 위치를 바꿔주는 식으로 진행
+* 
+* @solving_description 
+*/
+
 import java.util.ArrayList;
 import java.util.HashMap;
 

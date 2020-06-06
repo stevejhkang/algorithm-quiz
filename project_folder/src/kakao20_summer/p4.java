@@ -36,23 +36,17 @@ public class p4 {
 	    public int solution(int[][] board) {
 	        int answer = 0;
 
-
 	        int n = board.length;
 	        visit = new int [n][n]; //해당 점까지 가는데 걸리는 가격의 최솟값을 저장
 	        for(int i=0;i<n;i++) { 
-	        	Arrays.fill(visit[i], Integer.MAX_VALUE); //맥스값으로 초기화 시켜준다.
+	        	Arrays.fill(visit[i], Integer.MAX_VALUE); //최솟값을 저장할 것이기 때문에 맥스값으로 초기화 시켜준다.
 	        }
 	        
 	        int min = Integer.MAX_VALUE;
 	        Queue<dot> queue = new LinkedList<dot>();
-	        if(board[1][0]!=1) {
-	        	
-	        }
-	        if(board[0][1]!=1) {
-	        	
-	        }
+	        
 	        queue.add(new dot(0, 0, 1, 0)); //처음 점을 큐에추가 //아래와 오른쪽으로
-	        queue.add(new dot(0,0,3,0));
+	        queue.add(new dot(0, 0, 3, 0));
 	        
 	        while(!queue.isEmpty()) {
 	        	dot now = queue.poll();
@@ -70,7 +64,7 @@ public class p4 {
 	        	visit[y][x] = price; 
 	        	
 	        	if(y==n-1&&x==n-1) {
-	        		min= Math.min(min, price);
+	        		min= Math.min(min, price); //끝까지 도달하면 최솟값을 최신화 시켜준다.
 	        	}
 	        	
 	        	for(int dir=0;dir<4;dir++) {
@@ -82,10 +76,10 @@ public class p4 {
 	        			continue;
 	        		}
 	        		int new_price=0;
-	        		if(dir==direction) { //방향이 같거나 처음이면 직선도로
+	        		if(dir==direction) { //현재 방향이 같거나 처음이면 직선도로
 	        			new_price= price+100;
 	        		}
-	        		else if(dir!=direction){
+	        		else if(dir!=direction){ //현재 방향과 다르면 꺾는 도로이므로 600
 	        			new_price= price+600;
 	        		}
 	        		//돌이 아니고 현재 방문하려고 하는 곳에 저장된 값보다 적으면 들어간다.
@@ -98,9 +92,7 @@ public class p4 {
 	        
 	        return min;
 	    }
-	    static void dfs(dot now) {
-	    	
-	    }
+	    
 	    static class dot {
 	    	int y, x, direction, price;
 
@@ -108,13 +100,10 @@ public class p4 {
 				super();
 				this.y = y;
 				this.x = x;
-				this.direction = direction;
-				this.price = price;
+				this.direction = direction; //현재 방향
+				this.price = price; //현재까지 가는데 걸린 가격
 			}
-
-			
-		
-	    	
 	    }
+	    
 	}
 }
